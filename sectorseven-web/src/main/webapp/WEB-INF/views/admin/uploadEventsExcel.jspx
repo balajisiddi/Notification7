@@ -1,0 +1,40 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+		<div class="app-content student-registraion category-creation">
+			<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+			<div class="alert-danger">${errorList}</div>
+			<div class="alert-success">${msg}</div>
+				<form:form
+					action="${pageContext.request.contextPath}/admin/eventsDataExcel/upload"
+					enctype="multipart/form-data" commandName="eventsDataObj"
+					method="post">
+					 <div class="row">
+						<div class="col text-center text-white">
+							<h1>Events Data Excel Upload</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+					<div class="col">
+							Choose Excel File(.xlsx)<br />
+							<form:input type="file" path="document" class="form-control"
+								id="uploadedFile" accept=".xlsx" name="document" required="true"
+								placeholder="Upload File" />
+						</div>
+						<div class="col">
+							<button type="submit" value="submit" style="margin-top: 19px;"
+								class="btn btn-primary ">Submit</button>
+						</div>
+					</div>
+
+				</form:form>
+			</div>
+		</div>
+	</div>
+</div>

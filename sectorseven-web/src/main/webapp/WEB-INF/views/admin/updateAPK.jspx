@@ -1,0 +1,56 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<div class="app-content student-registraion">
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+				<form:form
+					action="${pageContext.request.contextPath}/admin/apkUpdate"
+					commandName="apkObj" method="post">
+
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>UpdateAPK</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="iosUrl" id="name"
+								placeholder="Enter IOS Url" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter IOS Url.</div>
+						</div>
+						<div class="col">
+							<form:input type="text" path="androidUrl" name="androidUrl"
+								placeholder="Enter Android Url" class="form-control"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter Android Url.</div>
+						</div>
+
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="version" name="version"
+								placeholder="Enter App Version" class="form-control"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter app version.</div>
+						</div>
+						<div class="col">
+							<button type="submit" value="submit"
+								class="btn btn-primary themeBtn3">Submit</button>
+						</div>
+					</div>
+
+
+				</form:form>
+			</div>
+		</div>
+	</div>
+	${errorList}
+
+</div>

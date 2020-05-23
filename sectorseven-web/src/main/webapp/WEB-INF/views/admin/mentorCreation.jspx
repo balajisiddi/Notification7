@@ -1,0 +1,263 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<c:if test="${not empty errorMsg}">
+		<fieldset>
+			<div class="alert-danger">${errorMsg}</div>
+		</fieldset>
+
+	</c:if>
+	
+	<div class="app-content student-registraion">
+		<div class="container">
+		<c:if test="${not empty msg}">
+		<fieldset>
+			<div class="alert-success">${msg}</div>
+		</fieldset>
+
+	</c:if>
+			<div class="col-md-12 col-md-offset-1">
+				<form:form class="form-horizontal needs-validation" enctype="multipart/form-data"  method="post" commandName="mentorObj"
+					action="${pageContext.request.contextPath}/admin/mentor/create">
+					<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 faderegister">
+						<div class="row">
+							<div class="col text-center text-white">
+								<h1>Mentor Registration</h1>
+							</div>
+
+						</div>
+
+						<fieldset>
+							<!-- Form Name -->
+							<legend class="mt-3">Personal Information Details</legend>
+							<!-- Text input-->
+							<div class="row align-items-center mt-2">
+								<div class="col">
+									<form:select path="salutation" class="form-control" required="true">
+										<form:option value="">Select</form:option>
+										<form:options items="${salutations}" itemLabel="id"
+											itemValue="id" />
+									</form:select>
+								</div>
+								<div class="col">
+									<form:input type="text" path="firstName"
+										placeholder="First Name" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<form:input type="text" path="lastName" placeholder="Last Name"
+										class="form-control" autocomplete="off" required="true" />
+								</div>
+							</div>
+							<div class="row align-items-center mt-4">
+								
+								<div class="col">
+									<form:input type="text" path="date_of_birth" placeholder="DOB"
+										class="form-control" readonly="true" id="datetimepicker" autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<div class="dropdown">
+										<form:select path="gender" id="gender" class="form-control "
+											required="true">
+											<form:option value="">Gender</form:option>
+											<form:options items="${genders}" itemLabel="id"
+												itemValue="id" />
+										</form:select>
+									</div>
+								</div>
+								<div class="col">
+									<form:input type="text" path="education"
+										placeholder="Enter Education" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="row align-items-center mt-4">
+								
+								<div class="col">
+									<form:input type="text" path="occupation"
+										placeholder="Occupation" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+                            <div class="dropdown">
+                                <form:select path="occupationCategory.id" id="careerCategory"
+                                    class="form-control" required="true" >
+                                    <form:option value="">OccupationCategouries</form:option>
+                                    <form:options items="${catList}" itemLabel="categoryName"
+                                        itemValue="id" />
+                                </form:select>
+                            </div>
+                        </div>
+							</div>
+
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<form:input type="text" path="mobile" placeholder="Contact No"
+										class="form-control number" autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<form:input type="text" path="email" placeholder="Email"
+										class="form-control" autocomplete="off" required="true" />
+								</div>
+							</div>
+							<!-- Address Section -->
+							<!-- Form Name -->
+							<legend class="mt-3">Address Details</legend>
+							<!-- Text input-->
+							<div class="row align-items-center mt-3">
+								<div class="col">
+									<form:input type="text" path="address"
+										placeholder="Address Line 1" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<form:input type="text" path="address1"
+										placeholder="Address Line 2" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<form:input type="text" path="city" placeholder="City"
+										class="form-control" autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<form:input type="text" path="state" placeholder="State"
+										class="form-control" autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<form:input type="text" path="pinCode" placeholder="Pincode"
+										class="form-control" autocomplete="off" required="true" />
+								</div>
+							</div>
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<form:input type="text" path="twitterUrl"
+										placeholder="Twitter Url" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<form:input type="text" path="linkedUrl"
+										placeholder="Linkedin Url" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+								<div class="col">
+									<form:input type="text" path="instagramUrl"
+										placeholder="Instagram Url" class="form-control"
+										autocomplete="off" required="true" />
+								</div>
+							</div>
+							<legend>Why do you want to be a mentor</legend>
+							<!--  Hobbies and intrests -->
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<form:textarea placeholder="I want to be a mentor because"
+										class="form-control" type="text" path="resonForMentor"
+										rows="3" cols="80" required="true" />
+								</div>
+							</div>
+							<legend>What difference can you make to SectorSeven as
+								Mentor</legend>
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<form:textarea placeholder="Diffrence can be made by"
+										class="form-control" type="text" path="diffMentorSectSeven"
+										rows="3" cols="80" required="true" />
+								</div>
+							</div>
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<p>How much time can you contribute daily</p>
+								</div>
+								<div class="col">
+									<form:select class="form-control" path="contributionTime" required="true">
+										<form:option value="">Select Timing</form:option>
+										<form:option value="1 to 2">1 to 2 Hours Daily</form:option>
+										<form:option value="2 to 4">2 to 4 Hourse Daily</form:option>
+									</form:select>
+								</div>
+							</div>
+
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<p>Would you like to answer (or) give solutions to students
+										queries</p>
+								</div>
+								<c:forEach items="${YesOrNo}" var="yesNO" varStatus="incr">
+									<div class="custom-control custom-radio custom-control-inline">
+										<form:radiobutton value="${yesNO.id}"
+											class="custom-control-input" path="solutionToStudents" required="true"
+											id="solutionToStudent${incr.index}" />
+										<label class="custom-control-label"
+											for="solutionToStudent${incr.index}">${yesNO.id}</label>
+									</div>
+								</c:forEach>
+							</div>
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<p>Would you like to contibute to Live Mentor Talks</p>
+								</div>
+								<c:forEach items="${YesOrNo}" var="yesNO" varStatus="incr">
+									<div class="custom-control custom-radio custom-control-inline">
+										<form:radiobutton value="${yesNO.id}" required="true"
+											class="custom-control-input" path="mentorTalks"
+											id="mentorTalkID${incr.index}" />
+										<label class="custom-control-label"
+											for="mentorTalkID${incr.index}">${yesNO.id}</label>
+									</div>
+								</c:forEach>
+							</div>
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<p>I would like to recieve updates about children's
+										activities on this platform everyday</p>
+								</div>
+								<c:forEach items="${YesOrNo}" var="yesNO" varStatus="incr">
+									<div class="custom-control custom-radio custom-control-inline">
+										<form:radiobutton value="${yesNO.id}" required="true"
+											class="custom-control-input" path="childActivities"
+											id="childActivitiesID${incr.index}" />
+										<label class="custom-control-label"
+											for="childActivitiesID${incr.index}">${yesNO.id}</label>
+									</div>
+								</c:forEach>
+							</div>
+							<div class="row align-items-center mt-4">
+								<div class="col">
+									<div class="pull-right">
+										<button type="reset" class="btn btn-default themeBtn2">Cancel</button>
+										<button type="submit" class="btn btn-primary themeBtn3">Save</button>
+									</div>
+								</div>
+							</div>
+
+						</fieldset>
+					</div>
+				</form:form>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$('#datetimepicker').datetimepicker({
+			format:'d-m-Y',
+			maxDate: 0,
+			timepicker: false,
+			startDate:	new Date(),
+			scrollMonth : false,
+			scrollInput : false
+			});
+	</script>
+	</div>
+</div>
+
+
+

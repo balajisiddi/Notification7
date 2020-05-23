@@ -1,0 +1,71 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	
+	<section>
+	<div class="app-content">
+	  <div class="container-fluid">
+	    <header> <h1 class="h3 display"><!--  --></h1></header>
+         <div class="row">
+           <div class="col-lg-12">
+             <div class="card">
+              <div class="card-header"><h4>Contribution Acceptance</h4></div>
+                <div class="card-body">
+                  <div class="table-responsive">
+		               <table id="schoolList" class="table table-bordered table-sm table-striped">
+										<div class="alert alert-success">
+											<a href="#" class="close" data-dismiss="alert"
+												aria-label="close">&amp;times;</a> <strong>Success!</strong>
+											${live}
+										</div>
+						<thead>
+			                <tr>
+			                  <th>Id</th>
+			                   <th>CareerCategory</th>
+			                    <th>CareerSubCategory</th>
+			                  <th>Message</th>
+			                  <th>View</th>
+			                  
+			                </tr>
+		                </thead>
+		                 <tbody>
+		                   <c:forEach items="${contributionsDocs}" var="contibution" varStatus="incr">
+			                    <tr>
+			                      <td scope="row">${incr.index+1}</td>
+			                   <td>${contibution.contribution.subject.categoryName}</td>
+			                      	<td>${contibution.contribution.subSubject.subCategoryName}</td>
+				                  <td>${contibution.contribution.message}</td>
+                                           <td>
+				                  <form action="contributionDocsView"  method="POST">
+                        <input value="${contibution.id}" name="contributionDocId" type="hidden" class="form-control"/>
+                           <button type="submit" class="btn btn-primary themeBtn3 mb-5">View</button>
+                     </form>
+                                  </td>
+				                </tr>
+		                   </c:forEach>
+		                </tbody>
+		               </table>
+		            </div>
+		          </div>
+		         </div>
+		       </div>  
+		      </div>
+		  </div>
+		  </div>
+	</section>
+    
+    <script type="text/javascript">
+	  $(function (){
+	      $("#schoolList").DataTable();
+	    })
+	</script>   
+	
+	
+</div>	
+	
+	
+	

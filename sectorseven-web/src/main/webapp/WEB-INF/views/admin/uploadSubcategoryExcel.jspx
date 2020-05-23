@@ -1,0 +1,74 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<div class="app-content student-registraion category-creation">
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+				<div class="alert-danger">${errorList}</div>
+				<div class="alert-success">${msg}</div>
+				<form:form
+					action="${pageContext.request.contextPath}/admin/subcatExcel/upload"
+					enctype="multipart/form-data" commandName="SubCategoryExcelObj"
+					method="post" multiple="multiple">
+
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>SubCategory Excel Upload</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<div class="dropdown">
+								<form:select path="careerCategory.id" id="careerCategory"
+									class="form-control ">
+									<form:option value="">Which Categouries</form:option>
+									<form:options items="${catList}" itemLabel="categoryName"
+										itemValue="id" />
+								</form:select>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+
+						<div class="col">
+							Upload SubCategory Icon<br />
+							<form:input type="file" path="subCategoryIcon"
+								class="form-control" id="uploadedFile"
+								accept="image/x-png, image/gif, image/jpeg"
+								name="subCategoryImg" placeholder="Upload File" />
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							Landing Image<br />
+							<form:input type="file" path="landingImage" name="landingImg"
+								class="form-control" autocomplete="off" />
+						</div>
+
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							Choose Excel File(.xlsx)<br />
+							<form:input type="file" path="document" class="form-control"
+								id="uploadedFile" accept=".xlsx" name="document" required="true"
+								placeholder="Upload File" />
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col text-right">
+							<button type="submit" value="submit" class="btn btn-primary ">Submit</button>
+						</div>
+					</div>
+				</form:form>
+			</div>
+		</div>
+	</div>
+
+	<div class="alert-danger">${errorList}</div>
+	<div class="alert-success">${msg}</div>
+</div>

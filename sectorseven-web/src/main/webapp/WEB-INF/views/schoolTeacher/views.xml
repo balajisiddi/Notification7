@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition extends="schoolTeacherTemplate" name="/schoolTeacher/students">
+		<put-attribute name="body" value="/WEB-INF/views/schoolTeacher/assignedStudents.jsp" />
+	</definition>
+	
+	<!-- <definition extends="schoolTeacherTemplate" name="schoolTeacher/sigmasDetails">
+		<put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	
+    <definition extends="schoolTeacherTemplate" name="schoolTeacher/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jspx" />
+    </definition>
+    
+    <definition extends="schoolTeacherTemplate" name="schoolTeacher/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jspx" />
+    </definition>
+    
+    <definition extends="schoolTeacherTemplate" name="schoolTeacher/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/student/profile">
+        <put-attribute name="body" value="/WEB-INF/views/schoolTeacher/studentProfile.jsp" />
+	</definition> 
+	 -->
+	
+</tiles-definitions>

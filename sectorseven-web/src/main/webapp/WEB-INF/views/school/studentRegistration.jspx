@@ -1,0 +1,213 @@
+<div class="mg-content" id="mg-content" xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	
+	<c:if test="${not empty errorMsg}">
+				<fieldset>
+				<div class="alert-danger">
+					${errorMsg}
+				</div>
+				</fieldset>
+				
+			</c:if>
+			
+			<div class="app-content student-registraion">
+	<div class="container">
+  <br></br>
+  <c:if test="${not empty msg}">
+				<fieldset>
+				<div class="alert-success">
+					${msg}
+				</div>
+				</fieldset>
+				
+			</c:if>
+    <div class="col-md-12 col-md-offset-1">
+	<form:form class="form-horizontal needs-validation" autocomplete="off"  method="post" commandName="studentData" action="${pageContext.request.contextPath}/admin/student/create">
+       <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 faderegister">
+       <div class="row">
+              <div class="col text-center text-white">
+                <h1>Student Registration</h1>
+              </div>
+            </div>
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Personal Information Details</legend>
+            <!-- Text input-->
+         <div class="row align-items-center">
+            
+            <div class="col mt-4">
+              <form:input type="text" path="firstName" id="fistName" placeholder="First Name" required="true" class="form-control" />
+            </div>
+            <div class="col mt-4">
+              <form:input type="text" path="lastName" id="lastName" placeholder="last Name" class="form-control" required="true" />
+            </div>
+
+          </div>
+            <div class="row align-items-center mt-4">
+                     <div class="col">
+               <form:input type="text" id="datetimepicker" path="date_of_birth"  placeholder="DOB" class="form-control" required="true" readonly="true" />
+              </div>
+              <div class="col">
+            <div class="dropdown">
+               <form:select path="gender" id="gender" class="form-control " required="true">
+						<form:option value="">Gender</form:option>
+						<form:options items="${genders}" itemLabel="id" itemValue="id" />
+					</form:select>
+				</div>   
+               </div>
+              </div>
+          <!-- Text input-->
+          <div class="row align-items-center mt-4">
+          <div class="col">
+              <form:input type="text" id="studentClass" path="studentClass"  placeholder="Class" class="form-control" required="true" />
+            </div>
+                   <div class="col">
+              <form:input type="text" path="email"  placeholder="Enter Email" class="form-control" required="true" />
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+           <div class="col">
+            <div class="dropdown">
+               <form:select path="studentStream" id="studentStream" class="form-control " required="true">
+						<form:option value="">Stream</form:option>
+						<form:options items="${yesorno}" itemLabel="id" itemValue="id" />
+					</form:select>
+				</div>   
+               </div>
+          <div class="col">
+              <form:input type="text" id="section" path="section"  placeholder="Enter Section" class="form-control" required="true" />
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+              <div class="col">
+                <!-- <input type="text" class="form-control" placeholder="Class"> -->
+                <div class="dropdown">
+                  <form:select path="school.id" id="selectSchool" class="form-control" required="true" >
+                 		<form:option value="">School</form:option>
+						<form:options items="${schoolsList}" itemLabel="schoolName" itemValue="id" />
+					</form:select>
+                </div>
+              </div>
+              <div class="col">
+            <div class="dropdown">
+               <form:select path="schoolTeacher.id" id="selectClassTeacher" class="form-control " required="true">
+                  <form:option value="">Select Teacher</form:option>
+				</form:select>
+				</div>   
+               </div>
+              <div class="col">
+                <!-- <input type="text" class="form-control" placeholder="Class"> -->
+                <div class="dropdown">
+                  <form:select path="acedemicYear.id" id="academicYear" class="form-control" required="true" >
+                 		<form:option value="">AcadamicYear</form:option>
+						<form:options items="${academicList}" itemLabel="name" itemValue="id" />
+					</form:select>
+                </div>
+              </div>
+               
+            </div>
+<!-- Address Section -->
+          <!-- Form Name -->
+          <legend>Address Details</legend>
+          <!-- Text input-->
+          <div class="row align-items-center mt-4">
+				<div class="col">
+					<form:input type="text" path="parents.address" placeholder="Address Line 1" class="form-control" required="true" autocomplete="off" />
+				</div>
+			</div>
+			<!-- Text input-->
+			<div class="row align-items-center mt-4">
+				<div class="col">
+					<form:input type="text" path="parents.address1" placeholder="Address Line 2" required="true" class="form-control"  autocomplete="off" />
+				</div>
+			</div>
+          <!-- Text input-->
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <form:input type="text" path="parents.city" placeholder="City" class="form-control" autocomplete="off"  required="true" />
+            </div>
+            <div class="col">
+              <form:input type="text" path="parents.state" placeholder="State" class="form-control" autocomplete="off" required="true" />
+            </div>
+            <div class="col">
+              <form:input type="text" path="parents.pincode" placeholder="Pincode" class="form-control" autocomplete="off" required="true" />
+            </div>
+          </div>
+<!-- Parent/Guadian Contact Section -->
+          <!-- Form Name -->
+          <legend>Parent/Guadian Information</legend>
+          <!-- Text input-->
+              <h5>Father Name</h5>
+	          <div class="row align-items-center mt-4">
+		            <div class="col">
+		              <form:input type="text" path="parents.fatherName" placeholder="Father Name" class="form-control" autocomplete="off" required="true" />
+		            </div>
+		            <div class="col">
+	               <form:input type="number" path="parents.fatherMobile" placeholder="Father Mobile" class="form-control" autocomplete="off" required="true" />
+	            </div>
+	            <div class="col">
+	              <form:input type="text" path="parents.fatherEmail" placeholder="Father Email" class="form-control" autocomplete="off" required="true" />
+	            </div>
+	          </div>
+	          <h5>Mother Name</h5>
+             <div class="row align-items-center mt-4">
+	            <div class="col">
+	               <form:input type="text" path="parents.motherName" placeholder="Mother Name" class="form-control" autocomplete="off" required="true" />
+	            </div>
+	            <div class="col">
+	               <form:input type="number" path="parents.motherMobile" placeholder="Mother Mobile" class="form-control" autocomplete="off" required="true" />
+	            </div>
+	            <div class="col">
+	              <form:input type="text" path="parents.motherEmail" placeholder="Mother Email" class="form-control" autocomplete="off" required="true" />
+	            </div>
+             </div>
+<!-- Command -->
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <div class="pull-right">
+                <button type="reset" class="btn btn-default themeBtn2">Reset</button>
+                <button type="submit" class="btn btn-primary themeBtn3">Save</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        </div>
+     </form:form>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <script type="text/javascript">
+	$('#datetimepicker').datetimepicker({
+		format:'d-m-Y',
+		maxDate: 0,
+		timepicker: false,
+		startDate:	new Date(),
+		scrollMonth : false,
+		scrollInput : false
+		});
+  var $j = jQuery.noConflict();
+  $j("#selectSchool").change(function(){
+	    var schoolId = $j(this).val();
+	    $j.ajax({
+	        type: 'GET',
+	        url: "${pageContext.request.contextPath}/student/schoolTeacherList/" + schoolId,
+	        success: function(data){
+	            var slctSubcat=$j('#selectClassTeacher'),option="";
+		        slctSubcat.empty();
+		        $j.each(data, function( index, value ) {
+					 option = option + "<option value="+value.id+">"+value.firstName+"</option>";
+				});
+		        slctSubcat.append(option);	   
+	            },
+	        error:function(){
+	            alert("error");
+	        }
+
+	    });
+  });
+  </script>
+  </div>
+</div>

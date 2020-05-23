@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<!-- <definition extends="parentTemplate" name="parent/profile">
+		<put-attribute name="body" value="/WEB-INF/views/parent/profile.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/sigmasDetails">
+		<put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	
+    <definition extends="parentTemplate" name="parent/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jspx" />
+    </definition>
+    
+    <definition extends="parentTemplate" name="parent/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jspx" />
+    </definition>
+    
+    <definition extends="parentTemplate" name="parent/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+	 -->
+	<definition extends="parentTemplate" name="parent/childsinfo">
+		<put-attribute name="body" value="/WEB-INF/views/parent/childinfo.jsp" />
+	</definition>
+	
+	<!-- <definition extends="parentTemplate" name="common/trending">
+        <put-attribute name="body" value="/WEB-INF/views/common/trendingCareers.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="common/amITheOne">
+        <put-attribute name="body" value="/WEB-INF/views/common/amITheOne.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="student/skills">
+        <put-attribute name="body" value="/WEB-INF/views/common/skillAndRes.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="student/media">
+        <put-attribute name="body" value="/WEB-INF/views/common/media.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="student/HGT">
+        <put-attribute name="body" value="/WEB-INF/views/common/HGT.jsp" />
+	</definition>
+ -->	
+</tiles-definitions>

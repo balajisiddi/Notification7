@@ -1,0 +1,139 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<section class="contribution-bg">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-lg-10 student-view">
+					<div class="bgsuccess cbe">
+						<c:if test="${ not empty msg}">
+							<div class="alert alert-success">
+								<a href="#" class="close" data-dismiss="alert"
+									aria-label="close">&amp;times;</a> <strong>Success!</strong>
+								${msg}
+							</div>
+						</c:if>
+						<div class="row">
+							<div class="col-12 col-sm-6 col-md-6">
+								<div class="content">
+									<h2>Contribution</h2>
+									<p>All of us are on a mission to Make India Great Again.
+										All of us are born with infinite potential and endless
+										curiosity. We have the innate urge to do our bit for the
+										social good. Two thirds of India is under the age of 35. Every
+										one of them needs guidance and mentoring. We have students,
+										parents, teachers, mentors and policy makers on this platform.
+										Time has arrived for every one of us to pay back to the
+										society. The world of Students need contribution in terms of
+										presentations, audios, videos from every one of the
+										stakeholders. Every student can bring out his uniqueness
+										through his/her contribution and let all other students know
+										the same exapnd their knowledge horizons. All teachers can
+										reach millions of students across the globe with their unique
+										insights on different subjects and learnings. Parents and
+										mentors can guide the vast number of students with their
+										expertise in their specialised subject matter. Policy holders
+										can contribute about administrative and public policy insights
+										which will be useful to every other stakeholder. All the
+										contributions will be reviewed and uploaded under different
+										heads in the library.</p>
+									​
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-6">
+								<form:form
+									action="${pageContext.request.contextPath}/common/contribution"
+									enctype="multipart/form-data" commandName="contributionObj"
+									method="post">
+									<div class="row">
+										<div class="col-sm-12 col-md-6 col-lg-12" id="catani">
+											<form:select path="subject.id" id="category"
+												class="form-control category">
+												<form:option value="null">---Choose Category----</form:option>
+												<form:options items="${catList}" itemLabel="categoryName"
+													itemValue="id" />
+											</form:select>
+										</div>
+										<div class="col-sm-12 col-md-6 col-lg-6">
+											<form:select path="subSubject.id" id="subCategory"
+												class="form-control">
+												<!--  -->
+											</form:select>
+										</div>
+									</div>
+									<div class="form-group mt-3">
+										<form:textarea placeholder="Message" path="message"
+											class="form-control form-rounded" rows="6" id="uploadedFile"
+											name="document" required="true" />
+
+									</div>
+									<div class="form-group">
+										<form:input type="file" path="contDocs" class="form-control"
+											id="uploadedFile" name="document" required="true"
+											multiple="multiple" />
+
+									</div>
+									<button type="submit" value="submit"
+										class="btn btn-primary con-subbtn">
+										Submit <i class="fa fa-sign-in" aria-hidden="true"> <!--  -->
+										</i>
+									</button>
+								</form:form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		//for contribution
+		$("#category")
+				.change(
+						function() {
+							var selectedCat = $(this).val();
+							console.log(selectedCat);
+							if (selectedCat == 'null') {
+								$("#category").empty();
+								$("#subCategory").empty();
+								$("#subCategory").css("display", "none");
+								$("#catani").removeClass("col-lg-6");
+								$("#catani").addClass("col-lg-12");
+							} else {
+								//for subcats
+								$
+										.ajax({
+											type : 'GET',
+											url : "${pageContext.request.contextPath}/common/getSubCategories/"
+													+ selectedCat,
+											success : function(data) {
+												console.log(data);
+												var slctSubcat = $('#subCategory'), option = "";
+												slctSubcat.empty();
+												$
+														.each(
+																data,
+																function(index,
+																		value) {
+																	option = option
+																			+ "<option value="+value.id+">"
+																			+ value.subCategoryName
+																			+ "</option>";
+																});
+												slctSubcat.append(option);
+											},
+											error : function() {
+												alert("error");
+											}
+										});
+								$("#catani").removeClass("col-lg-12");
+								$("#catani").addClass("col-lg-6");
+								$("#subCategory").css("display", "block");
+							}
+						});
+	</script>
+</div>

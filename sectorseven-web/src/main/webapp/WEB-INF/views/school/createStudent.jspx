@@ -1,0 +1,33 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<div class="container">
+			<c:if test="${not empty errorMsg}">
+				<fieldset>
+				<div class="alert-danger">
+					${errorMsg}
+				</div>
+				</fieldset>
+				
+			</c:if>
+			<c:if test="${not empty msg}">
+				<fieldset>
+				<div class="alert-success">
+					${msg}
+				</div>
+				</fieldset>
+				
+			</c:if>
+			<div class="">
+				<!--  -->
+			</div>
+	</div>
+
+
+</div>
+
+

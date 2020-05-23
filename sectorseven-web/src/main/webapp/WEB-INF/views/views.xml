@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition extends="logintemplate" name="dataAccessFailure">
+		<put-attribute name="body" value="/WEB-INF/views/dataAccessFailure.jspx" />
+	</definition>
+
+	<definition extends="logintemplate" name="resourceNotFound">
+		<put-attribute name="body" value="/WEB-INF/views/resourceNotFound.jspx" />
+	</definition>
+
+	<definition extends="logintemplate" name="uncaughtException">
+		<put-attribute name="body"	value="/WEB-INF/views/uncaughtException.jspx" />
+	</definition>
+
+    
+	<definition extends="logintemplate" name="login">
+		<put-attribute name="body" value="/WEB-INF/views/login.jspx" />
+	</definition>
+	
+	<definition extends="logintemplate" name="schoolLoginPage">
+		<put-attribute name="body" value="/WEB-INF/views/school-login.jspx" />
+	</definition>
+	
+	<definition extends="logintemplate" name="studentLoginPage">
+		<put-attribute name="body" value="/WEB-INF/views/student-login.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/dashboard">
+		<put-attribute name="body" value="/WEB-INF/views/admin/adminDashboard.jspx" />
+	</definition>
+	<definition extends="adminTemplate" name="admin/school/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/schoolCreation.jspx" />
+	</definition>
+	<definition extends="adminTemplate" name="admin/interests/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/interestCreation.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/school/update">
+		<put-attribute name="body" value="/WEB-INF/views/admin/updateSchoolData.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/school/list">
+		<put-attribute name="body" value="/WEB-INF/views/admin/schoolsList.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/student/create">
+		<put-attribute name="body" value="/WEB-INF/views/school/studentRegistration.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/teacher/create">
+		<put-attribute name="body" value="/WEB-INF/views/school/schoolTeacherRegistration.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subCareerScholorships">
+        <put-attribute name="body" value="/WEB-INF/views/admin/scholorships.jspx" />
+	</definition>
+	
+	
+<!-- 	<definition extends="adminTemplate" name="admin/subCareerScholorships"> -->
+<!--         <put-attribute name="body" value="/WEB-INF/views/admin/successPersons.jspx" /> -->
+<!-- 	</definition> -->
+	
+		<definition extends="adminTemplate" name="admin/saveDemand">
+        <put-attribute name="body" value="/WEB-INF/views/admin/demandAndSupply.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/apkupdate">
+        <put-attribute name="body" value="/WEB-INF/views/admin/updateAPK.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/uploadCmImg">
+        <put-attribute name="body" value="/WEB-INF/views/admin/uploadCmImg.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/course">
+        <put-attribute name="body" value="/WEB-INF/views/admin/institutionCourses.jspx" />
+	</definition>
+	
+	
+<definition extends="adminTemplate" name="admin/sigmaDetailsExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSigmaDetailsExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/instituteExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadInstitutionsExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/instituteCourseExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadInstitutionCoursesExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/institutesCoursesExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadInstitutionsAndCoursesExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subcatDetailsYoutubeUrlExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSubcatDetailsYoutubeUrlExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subcatExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSubcategoryExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/studentDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadStudentDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/mentorDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadMentorDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/teacherDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSchoolTeacherDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/successfulPersonalityDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSuccessfulPersonalityDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/demandAndSupplyDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadDemandAndSupplyExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/eventsDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadEventsExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/userFeedbacks">
+		<put-attribute name="body" value="/WEB-INF/views/admin/userFeedbacks.jspx" />
+	</definition>
+	
+<!-- 	UserDashboards -->
+	<definition extends="studentTemplate" name="student/dashboard">
+		<put-attribute name="body" value="/WEB-INF/views/recvideos.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/dashboard">
+		<put-attribute name="body" value="/WEB-INF/views/recvideos.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/dashboard">
+		<put-attribute name="body" value="/WEB-INF/views/recvideos.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/dashboard">
+		<put-attribute name="body" value="/WEB-INF/views/recvideos.jsp" />
+	</definition>
+	
+<!-- 	For DemandAndSupply -->
+	<definition extends="studentTemplate" name="student/demand">
+        <put-attribute name="body" value="/WEB-INF/views/common/demand.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/demand">
+        <put-attribute name="body" value="/WEB-INF/views/common/demand.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/demand">
+        <put-attribute name="body" value="/WEB-INF/views/common/demand.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/demand">
+        <put-attribute name="body" value="/WEB-INF/views/common/demand.jsp" />
+	</definition>
+	
+	<!-- 	For SigmaDetails -->
+	   <definition extends="studentTemplate" name="student/sigmasDetails">
+		<put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	
+		<definition extends="mentorTemplate" name="mentor/sigmasDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/sigmasDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/sigmasDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	
+		<!-- 	For Student-details In All 3 other dashboards -->
+	
+	
+	<definition extends="mentorTemplate" name="mentor/studentDetails">
+		<put-attribute name="body" value="/WEB-INF/views/common/studentDetails.jsp" />
+	</definition>
+	
+		<definition extends="schoolTeacherTemplate" name="schoolTeacher/studentDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/studentDetails.jsp" />
+	</definition>
+	
+		<!-- 	For Student-details In All other dashboards -->
+		
+	<definition extends="parentTemplate" name="parent/childDetails">
+        <put-attribute name="body" value="/WEB-INF/views/parent/childinfo.jsp" />
+	</definition>
+		
+	
+	<!-- 	For AmITheOne -->
+	<definition extends="studentTemplate" name="student/amITheOne">
+        <put-attribute name="body" value="/WEB-INF/views/common/amITheOne.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/amITheOne">
+        <put-attribute name="body" value="/WEB-INF/views/common/amITheOne.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/amITheOne">
+        <put-attribute name="body" value="/WEB-INF/views/common/amITheOne.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/amITheOne">
+        <put-attribute name="body" value="/WEB-INF/views/common/amITheOne.jsp" />
+	</definition>
+	
+	<!-- 	For Media -->
+	<definition extends="studentTemplate" name="student/media">
+        <put-attribute name="body" value="/WEB-INF/views/common/media.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/media">
+        <put-attribute name="body" value="/WEB-INF/views/common/media.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/media">
+        <put-attribute name="body" value="/WEB-INF/views/common/media.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/media">
+        <put-attribute name="body" value="/WEB-INF/views/common/media.jsp" />
+	</definition>
+	
+	<!-- 	For HGT -->
+	<definition extends="studentTemplate" name="student/HGT">
+        <put-attribute name="body" value="/WEB-INF/views/common/HGT.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/HGT">
+        <put-attribute name="body" value="/WEB-INF/views/common/HGT.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/HGT">
+        <put-attribute name="body" value="/WEB-INF/views/common/HGT.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/HGT">
+        <put-attribute name="body" value="/WEB-INF/views/common/HGT.jsp" />
+	</definition>
+	
+	<!-- 	For skilAndRes -->
+	<definition extends="studentTemplate" name="student/skills">
+        <put-attribute name="body" value="/WEB-INF/views/common/skillAndRes.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/skills">
+        <put-attribute name="body" value="/WEB-INF/views/common/skillAndRes.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/skills">
+        <put-attribute name="body" value="/WEB-INF/views/common/skillAndRes.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/skills">
+        <put-attribute name="body" value="/WEB-INF/views/common/skillAndRes.jsp" />
+	</definition>
+	
+	<!-- 	For Profiles -->
+	<definition extends="studentTemplate" name="student/profile">
+        <put-attribute name="body" value="/WEB-INF/views/common/profile.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/profile">
+        <put-attribute name="body" value="/WEB-INF/views/common/profile.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/profile">
+        <put-attribute name="body" value="/WEB-INF/views/common/profile.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/profile">
+        <put-attribute name="body" value="/WEB-INF/views/common/profile.jsp" />
+	</definition>
+
+
+<!-- 	For Events -->
+	<definition extends="studentTemplate" name="student/events">
+        <put-attribute name="body" value="/WEB-INF/views/common/events.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/events">
+        <put-attribute name="body" value="/WEB-INF/views/common/events.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/events">
+        <put-attribute name="body" value="/WEB-INF/views/common/events.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/events">
+        <put-attribute name="body" value="/WEB-INF/views/common/events.jsp" />
+	</definition>
+	
+	<!-- 	For ActivityLog -->
+	<definition extends="studentTemplate" name="student/activitylog">
+        <put-attribute name="body" value="/WEB-INF/views/common/activitylog.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/activitylog">
+        <put-attribute name="body" value="/WEB-INF/views/common/activitylog.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/activitylog">
+        <put-attribute name="body" value="/WEB-INF/views/common/activitylog.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/activitylog">
+        <put-attribute name="body" value="/WEB-INF/views/common/activitylog.jsp" />
+	</definition>
+	
+	
+		<!-- 	For Notifications -->
+	<definition extends="studentTemplate" name="student/notifications">
+        <put-attribute name="body" value="/WEB-INF/views/common/notification.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/notifications">
+        <put-attribute name="body" value="/WEB-INF/views/common/notification.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/notifications">
+        <put-attribute name="body" value="/WEB-INF/views/common/notification.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/notifications">
+        <put-attribute name="body" value="/WEB-INF/views/common/notification.jsp" />
+	</definition>
+	
+	<!-- 	For Recommended -->
+	<definition extends="studentTemplate" name="student/videos">
+        <put-attribute name="body" value="/WEB-INF/views/common/videos.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/videos">
+        <put-attribute name="body" value="/WEB-INF/views/common/videos.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/videos">
+        <put-attribute name="body" value="/WEB-INF/views/common/videos.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/videos">
+        <put-attribute name="body" value="/WEB-INF/views/common/videos.jsp" />
+	</definition>
+	
+	<!-- For library -->
+	<definition extends="studentTemplate" name="student/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jsp" />
+    </definition>
+    
+    <definition extends="mentorTemplate" name="mentor/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jsp" />
+	</definition>
+		<!-- For library -->
+	
+	<!-- For sub library -->
+    
+    <definition extends="studentTemplate" name="student/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jsp" />
+    </definition>
+    
+      <definition extends="mentorTemplate" name="mentor/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jsp" />
+	</definition>
+	
+		<!-- For sub library -->
+	<!-- For sub library details -->
+    
+    <definition extends="studentTemplate" name="student/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+	
+	  <definition extends="mentorTemplate" name="mentor/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+	
+		<!-- For sub library details -->
+	
+	
+	
+	<!-- 	For PlayVideo -->
+	<definition extends="studentTemplate" name="student/playVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playvideo.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/playVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playvideo.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/playVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playvideo.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/playVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playvideo.jsp" />
+	</definition>
+	
+	<!-- 	For Private Video -->
+	<definition extends="studentTemplate" name="student/privateVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playPrivateVideo.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/privateVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playPrivateVideo.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/privateVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playPrivateVideo.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/privateVideo">
+        <put-attribute name="body" value="/WEB-INF/views/common/playPrivateVideo.jsp" />
+	</definition>
+	
+	<!-- 	For PDFS -->
+	<definition extends="studentTemplate" name="student/pdfs">
+        <put-attribute name="body" value="/WEB-INF/views/common/pdfs.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/pdfs">
+        <put-attribute name="body" value="/WEB-INF/views/common/pdfs.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/pdfs">
+        <put-attribute name="body" value="/WEB-INF/views/common/pdfs.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/pdfs">
+        <put-attribute name="body" value="/WEB-INF/views/common/pdfs.jsp" />
+	</definition>
+	
+	
+	<!-- For Trening Career -->
+	<definition extends="studentTemplate" name="student/trending">
+		<put-attribute name="body" value="/WEB-INF/views/common/trendingCareers.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/trending">
+		<put-attribute name="body" value="/WEB-INF/views/common/trendingCareers.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/trending">
+		<put-attribute name="body" value="/WEB-INF/views/common/trendingCareers.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/trending">
+		<put-attribute name="body" value="/WEB-INF/views/common/trendingCareers.jsp" />
+	</definition>
+	
+	<!-- For Percentages Career -->
+	<definition extends="studentTemplate" name="student/history">
+		<put-attribute name="body" value="/WEB-INF/views/history.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/history">
+		<put-attribute name="body" value="/WEB-INF/views/history.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/history">
+		<put-attribute name="body" value="/WEB-INF/views/history.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/history">
+		<put-attribute name="body" value="/WEB-INF/views/history.jsp" />
+	</definition>
+	
+	<!-- 	For CoCreationHub -->
+	<definition extends="studentTemplate" name="student/cocreationhub">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhub.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/cocreationhub">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhub.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/cocreationhub">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhub.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/cocreationhub">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhub.jsp" />
+	</definition>
+	
+	<!-- 	For CoCreationHubDetails -->
+	<definition extends="studentTemplate" name="student/hubMap">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhubMap.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/hubMap">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhubMap.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/hubMap">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhubMap.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/hubMap">
+        <put-attribute name="body" value="/WEB-INF/views/common/cocreationhubMap.jsp" />
+	</definition>
+	
+<!-- 	For Sigmas -->
+	<definition extends="studentTemplate" name="student/sigmas">
+        <put-attribute name="body" value="/WEB-INF/views/common/seven-sigmas.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/sigmas">
+        <put-attribute name="body" value="/WEB-INF/views/common/seven-sigmas.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/sigmas">
+        <put-attribute name="body" value="/WEB-INF/views/common/seven-sigmas.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/sigmas">
+        <put-attribute name="body" value="/WEB-INF/views/common/seven-sigmas.jsp" />
+	</definition>
+	
+	<!-- 	For Contribution -->
+	<definition extends="studentTemplate" name="student/contribution">
+        <put-attribute name="body" value="/WEB-INF/views/common/contribution.jspx" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/contribution">
+        <put-attribute name="body" value="/WEB-INF/views/common/contribution.jspx" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/contribution">
+        <put-attribute name="body" value="/WEB-INF/views/common/contribution.jspx" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/contribution">
+        <put-attribute name="body" value="/WEB-INF/views/common/contribution.jspx" />
+	</definition>
+	
+	<!-- 	For s7Talks -->
+	<definition extends="studentTemplate" name="student/s7Talks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7talks.jspx" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/s7Talks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7talks.jspx" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/s7Talks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7talks.jspx" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/s7Talks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7talks.jspx" />
+	</definition>
+	
+	<!-- 	For InterestsAfterLogin -->
+	
+	
+	<!-- 	For userTalks -->
+	<definition extends="studentTemplate" name="student/userTalks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7UserTalks.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/userTalks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7UserTalks.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/userTalks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7UserTalks.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/userTalks">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7UserTalks.jsp" />
+	</definition>
+	
+	<!-- 	For s7TalksDetails -->
+	<definition extends="studentTemplate" name="student/s7TalksDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7Talks-details.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/s7TalksDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7Talks-details.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/s7TalksDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7Talks-details.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/s7TalksDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/s7Talks-details.jsp" />
+	</definition>
+	
+	
+	<!-- 	For s7TalksDetails -->
+	<definition extends="studentTemplate" name="student/hubDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/eventaddress.jsp" />
+	</definition>
+	
+	<definition extends="mentorTemplate" name="mentor/hubDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/eventaddress.jsp" />
+	</definition>
+	
+	<definition extends="schoolTeacherTemplate" name="schoolTeacher/hubDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/eventaddress.jsp" />
+	</definition>
+	
+	<definition extends="parentTemplate" name="parent/hubDetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/eventaddress.jsp" />
+	</definition>
+	
+	
+	
+	<!-- 	For InterestsAfterLogin -->
+	<definition extends="logintemplate" name="common/interests">
+		<put-attribute name="body" value="/WEB-INF/views/common/interets-after-login.jsp" />
+	</definition>
+	
+	<definition extends="logintemplate" name="common/subInterests">
+		<put-attribute name="body" value="/WEB-INF/views/common/sub-interets-after-login.jsp" />
+	</definition>
+	
+	<definition extends="logintemplate" name="common/bio">
+        <put-attribute name="body" value="/WEB-INF/views/bio.jsp" />
+	</definition>
+	
+	<definition extends="logintemplate" name="forgot">
+        <put-attribute name="body" value="/WEB-INF/views/forgot.jsp" />
+	</definition>
+	
+</tiles-definitions>

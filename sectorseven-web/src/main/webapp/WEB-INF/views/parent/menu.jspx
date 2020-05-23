@@ -1,0 +1,66 @@
+<div class="mg-sidenav">
+	<section class="demo-contents">
+		<div class="sidenav cursor" id="mySidenav">
+			<div class="semi-circle parent-dashboard-menu">
+				<div class="inner-semi" style="position: relative;">
+					<div class="inner-semi-1">
+						<img alt="" src="../resources/images/menu-icon.png" />
+					</div>
+					<div class="inner-semi-2">
+						<img alt="" class="hoveredImage" src="../resources/images/When-Hovered.png" style="right: 16px; position: absolute; top: 13px;" />
+						<ol style="position: relative; left: -28px;">
+
+							<li tabindex="0"><a
+								href="${pageContext.request.contextPath}/common/s7Talks">
+									<i class="fa fa-dot-circle-o">
+										<!--  -->
+								</i> <span>S7Talks</span>
+							</a></li>
+							<li tabindex="0"><a
+								href="${pageContext.request.contextPath}/common/getAllHubs">
+									<i class="fa fa-dot-circle-o">
+										<!--  -->
+								</i> <span>Co-Creation Hub</span>
+							</a></li>
+							<li tabindex="0"><a
+								href="${pageContext.request.contextPath}/common/contribution">
+									<i class="fa fa-dot-circle-o">
+										<!--  -->
+								</i> <span>Contribution</span>
+							</a></li>
+							<li tabindex="0"><a
+								href="${pageContext.request.contextPath}/common/getCategories">
+									<i class="fa fa-dot-circle-o">
+										<!--  -->
+								</i> <span>Library</span>
+							</a></li>
+							<li tabindex="0"><a
+								href="${pageContext.request.contextPath}/common/sigmas"> <i
+									class="fa fa-dot-circle-o">
+										<!--  -->
+								</i><span>Seven Sigmas</span>
+							</a></li>
+							<li tabindex="0"><a href="${pageContext.request.contextPath}/common/childDetails">
+									<i class="fa fa-dot-circle-o">
+										<!--  -->
+								</i> <span>Child Info</span>
+							</a></li>
+							<li tabindex="0"><form action="${pageContext.request.contextPath}/common/activitylog" method="POST">
+                            <input type="hidden" value="main" name="scType" id="scType"/>
+                            <button class="btn">
+                            <i class="fa fa-dot-circle-o"><!--  --></i>
+                            <span>My Activity</span>
+                            </button>
+                            </form></li>
+							<li><a href="${pageContext.request.contextPath}/common/dashboard"> <i class="fa fa-dot-circle-o">
+										<!--  -->
+								</i> <span> Home</span>
+							</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="semi-circle-bg" style="position: absolute"></div>
+		</div>
+	</section>
+</div>

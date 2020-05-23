@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	         xmlns:beans="http://www.springframework.org/schema/beans" 
+	         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns:p="http://www.springframework.org/schema/p"
+			 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        						 http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+        						 
+        						 <http pattern="/studt/**"  security="none"/>
+        						 
+   <http pattern="/forgot" auto-config="true" use-expressions="true" >
+	    <intercept-url pattern="/resources/**" access="permitAll" requires-channel="any"/>
+	    <intercept-url pattern="/forgot" access="hasRole('ROLE_ANONYMOUS')" requires-channel="any"/>
+	     <intercept-url pattern="/**" access="hasAnyRole('ROLE_ANONYMOUS')" requires-channel="any"/>
+	</http>
+        	
+        					 
+     <http pattern="/**/**" auto-config="true" use-expressions="true" authentication-manager-ref="adminAuthenticationManager">
+	    <access-denied-handler ref="accessDeniedHandler" />
+	    	    <intercept-url pattern="/resources/**" access="permitAll" requires-channel="any"/>
+	      <intercept-url pattern="/login" access="permitAll" />
+        <intercept-url pattern="/logout" access="permitAll" />
+        <intercept-url pattern="/loginFail" access="permitAll" />
+	     <intercept-url pattern="/**" access="hasAnyRole('ROLE_ADMIN','ROLE_STUDENT','ROLE_MENTOR','ROLE_PARENT', 'ROLE_SCHOOL_TEACHER')" requires-channel="any"/>
+	    <form-login login-page="/login" default-target-url="/loginSuccess" login-processing-url="/j_spring_security_check"
+			 always-use-default-target="true" username-parameter="username" password-parameter="password"
+			 authentication-failure-url="/loginFail" />
+			 		<access-denied-handler error-page="/loginFail" />
+			 
+		<logout delete-cookies="JSESSIONID" logout-success-url="/" invalidate-session="true" logout-url="/j_spring_security_logout"/>
+	</http>
+	
+	
+	
+	<http pattern="/admin/**" auto-config="true" use-expressions="true" authentication-manager-ref="adminAuthenticationManager">
+	    <access-denied-handler ref="accessDeniedHandler" />
+	    <intercept-url pattern="/admin/resources/**" access="permitAll" requires-channel="any"/>
+	    <intercept-url pattern="/admin/login-status" access="isAuthenticated()" requires-channel="any"/>
+	    <intercept-url pattern="/admin/login/**" access="hasRole('ROLE_ANONYMOUS')" requires-channel="any"/>
+	     <intercept-url pattern="/**" access="hasAnyRole('ROLE_ADMIN')" requires-channel="any"/>
+	    <form-login login-page="/login" default-target-url="/admin" login-processing-url="/admin/j_spring_security_check"
+			always-use-default-target="true" authentication-failure-url="/adminLoginFail" />
+		<logout delete-cookies="JSESSIONID" logout-success-url="/" invalidate-session="true" logout-url="/admin/j_spring_security_logout"/>
+	</http>
+	
+	<http pattern="/school/**" auto-config="true" use-expressions="true" authentication-manager-ref="schoolAdminAuthenticationManager">
+	    <access-denied-handler ref="accessDeniedHandler" />
+	    <intercept-url pattern="/school/resources/**" access="permitAll" requires-channel="any"/>
+	    <intercept-url pattern="/school/login-status" access="isAuthenticated()" requires-channel="any"/>
+	    <intercept-url pattern="/school/login/**" access="hasRole('ROLE_ANONYMOUS')" requires-channel="any"/>
+	     <intercept-url pattern="/**" access="hasAnyRole('ROLE_SUPER_ADMIN','ROLE_SCHOOL_ADMIN','ROLE_SCHOOL_TEACHER')" requires-channel="any"/>
+	    <form-login login-page="/school-login" default-target-url="/school" login-processing-url="/school/j_spring_security_check"
+			always-use-default-target="true" authentication-failure-url="/login-fail" />
+		<logout delete-cookies="JSESSIONID" logout-success-url="/school-login" invalidate-session="true" logout-url="/school/j_spring_security_logout"/>
+	</http>
+	
+		<http pattern="/student/**" auto-config="true" use-expressions="true" authentication-manager-ref="studentAdminAuthenticationManager">
+	    <access-denied-handler ref="accessDeniedHandler" />
+	    <intercept-url pattern="/student/resources/**" access="permitAll" requires-channel="any"/>
+	    <intercept-url pattern="/student/login-status" access="isAuthenticated()" requires-channel="any"/>
+	    <intercept-url pattern="/student/login/**" access="hasRole('ROLE_ANONYMOUS')" requires-channel="any"/>
+	     <intercept-url pattern="/**" access="hasAnyRole('ROLE_STUDENT')" requires-channel="any"/>
+	    <form-login login-page="/student-login" default-target-url="/student" login-processing-url="/student/j_spring_security_check"
+			always-use-default-target="true" authentication-failure-url="/studentLoginFail" />
+		<logout delete-cookies="JSESSIONID" logout-success-url="/student-login" invalidate-session="true" logout-url="/student/j_spring_security_logout"/>
+	</http>
+	
+	<http pattern="/data/**" auto-config="true" use-expressions="true" disable-url-rewriting="true" create-session="stateless"
+        authentication-manager-ref="dataAuthenticationManager">
+	    <intercept-url pattern="/member/**" access="isAuthenticated()"/>
+	    <intercept-url pattern="/data/resources/**" access="permitAll"/>
+	    <intercept-url pattern="/data/**" access="permitAll"/>
+	    <intercept-url pattern="/**" access="hasRole('ROLE_DATA')"/>
+	    <http-basic/>
+   </http>
+   
+
+ <!-- <http pattern="/studt/**"  security="none"/> -->
+    
+   
+	<beans:bean id="adminAuthenticationManager" class="org.springframework.security.authentication.ProviderManager">
+		<beans:constructor-arg>
+			<beans:list>
+				<beans:bean	class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"
+					p:userDetailsService-ref="commonService"
+					p:passwordEncoder-ref="passwordEncoder" />
+				<!-- -->
+			</beans:list>
+		</beans:constructor-arg>
+	</beans:bean>
+	
+	<beans:bean id="schoolAdminAuthenticationManager" class="org.springframework.security.authentication.ProviderManager">
+		<beans:constructor-arg>
+			<beans:list>
+				<beans:bean	class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"
+					p:userDetailsService-ref="commonService"
+					p:passwordEncoder-ref="passwordEncoder" />
+				<!-- -->
+			</beans:list>
+		</beans:constructor-arg>
+	</beans:bean>
+	
+	<beans:bean id="studentAdminAuthenticationManager" class="org.springframework.security.authentication.ProviderManager">
+		<beans:constructor-arg>
+			<beans:list>
+				<beans:bean	class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"
+					p:userDetailsService-ref="commonService"
+					p:passwordEncoder-ref="passwordEncoder" />
+				<!-- -->
+			</beans:list>
+		</beans:constructor-arg>
+	</beans:bean>
+	
+	<authentication-manager>
+	    <authentication-provider>
+	        <jdbc-user-service id="commonService" data-source-ref="dataSource"
+				users-by-username-query="select user_name , decrypt_password, true as enabled from administrator_authority  where BINARY user_name=?"
+				authorities-by-username-query="select aa.user_name,aa.user_type as role from administrator_authority aa 
+											    where BINARY user_name=?" />
+	    </authentication-provider>
+	    </authentication-manager>
+	
+	   <authentication-manager id="dataAuthenticationManager">
+	    <authentication-provider>
+	      <user-service>	
+	        <user name="data" password="data" authorities="ROLE_DATA"/>
+	      </user-service>
+	    </authentication-provider>
+	  </authentication-manager>
+	  
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<beans:constructor-arg name="strength" value="12" />
+	</beans:bean>
+
+	<beans:bean class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+	<beans:bean id="authenticationTrustResolver" class="org.springframework.security.authentication.AuthenticationTrustResolverImpl" />
+	<beans:bean id="accessDeniedHandler" class="com.sectorseven.web.controller.admin.AccessDeniedHandler"/>
+	<beans:bean id="studentAccessDeniedHandler" class="com.sectorseven.web.controller.admin.StudentAccessDeniedHandler"/>
+	
+</beans:beans>

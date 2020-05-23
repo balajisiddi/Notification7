@@ -1,0 +1,209 @@
+<div class="mg-content" id="mg-content"
+    xmlns:spring="http://www.springframework.org/tags"
+    xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:sec="http://www.springframework.org/security/tags"
+    xmlns:form="http://www.springframework.org/tags/form"
+    xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <div class="container">
+        <div class="app-content student-registraion category-creation">
+            <div class="col-md-12 col-md-offset-1">
+                <form:form
+                    action="${pageContext.request.contextPath}/admin/subcareer/create"
+                    enctype="multipart/form-data" commandName="subCareerObject"
+                    method="post">
+                 
+                    <div class="row">
+						<div class="col text-center text-white">
+							<h1>Sub Category Creation</h1>
+						</div>
+					</div>
+                    <div class="row align-items-center mt-12">
+                        <div class="col">
+                            Enter SubCategory Name<br />
+                            <form:input type="text" path="subCategoryName"
+                                id="subCategoryName" placeholder="Enter SubCategory Name"
+                                class="form-control"  autocomplete="off" />
+                        </div>
+                        <div class="col">
+                            Upload SubCategory Icon<br />
+                            <form:input type="file" path="subCategoryImg"
+                                class="form-control" id="uploadedFile"
+                                accept="image/x-png, image/gif, image/jpeg"
+                                name="subCategoryImg"  placeholder="Upload File" />
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            Landing Image<br />
+                            <form:input type="file" path="landingImg" name="landingImg"
+                                 class="form-control" autocomplete="off" />
+                        </div>
+                        <div class="col">
+                            Am I The One Image<br />
+                            <form:input type="file" path="amITheOneImg" name="amITheOneImg"
+                                 class="form-control" autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <div class="dropdown">
+                                <form:select path="careerCategory.id" id="careerCategory"
+                                    class="form-control " >
+                                    <form:option value="">Categouries</form:option>
+                                    <form:options items="${catList}" itemLabel="categoryName"
+                                        itemValue="id" />
+                                </form:select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <form:select path="trending" class="form-control">
+                                <form:option value="">TrendingOrNot</form:option>
+                                <form:options items="${TrendingOrNot}" itemLabel="id"
+                                    itemValue="id" />
+                            </form:select>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="landingQuote" name="landingQuote"
+                                id="landingQuote" placeholder="Enter Landing Quote"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="landingDesc" name="landingDesc"
+                                placeholder="Enter Landing Description" 
+                                class="form-control" autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="amITheOne" name="amITheOne"
+                                id="amITheOne" placeholder="Enter Am I The One"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea class="form-control form-rounded" path="skills"
+                                name="skills" id="skills" placeholder="Enter skills(@@@)" rows="6"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea class="form-control form-rounded" path="roles"
+                                name="roles" id="roles" placeholder="Enter Roles(@@@)" rows="6"><!--  --></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="howToGetThere" name="howToGetThere"
+                                id="howToGetThere" placeholder="Enter How To Get There"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                            <div class="invalid-feedback">Enter How To Get There.</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Courses</h3>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="courseCat1" name="courseCat1"
+                                id="courseCat1" placeholder="Class 10+2" class="form-control"
+                                 autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="courseCat2" name="courseCat2"
+                                placeholder="Under-Gradudation Courses" 
+                                class="form-control" autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="courseCat3" name="courseCat3"
+                                id="courseCat3" placeholder="Post-Graduation Courses"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="courseCat4" name="courseCat4"
+                                placeholder="Doctoral Courses" 
+                                class="form-control" autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="courseCat5" name="courseCat5"
+                                id="courseCat5" placeholder="Diploma Courses"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="courseCat6" name="courseCat6"
+                                id="courseCat6" placeholder="Certification Courses"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Entrance Exams</h3>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="entranceCat1" name="entranceCat1"
+                                id="entranceCat1" placeholder="Graduation Level EntranceExams"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="entranceCat2" name="entranceCat2"
+                                id="entranceCat2"
+                                placeholder="Post-Graduation Level EntranceExams"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="entranceCat3" name="entranceCat3"
+                                id="entranceCat3" placeholder="Doctoral Level EntranceExams"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="entranceCat4" name="entranceCat4"
+                                id="entranceCat4" placeholder="Others Level EntranceExams"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Demand And Supply Description</h3>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="jobsDescription" name="jobsDescription"
+                                id="jobsDescription" placeholder="Jobs Description"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    
+                     <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <textarea rows="6" path="salaryDescription" name="salaryDescription"
+                                id="salaryDescription" placeholder="Salary Description"
+                                class="form-control"  autocomplete="off"><!--  --></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col text-right">
+                            <button type="submit" value="submit" style="margin-top: 19px;"
+                                class="btn btn-primary themeBtn3">Submit</button>
+                        </div>
+                    </div>
+                </form:form>
+            </div>
+        </div>
+    </div>
+</div>

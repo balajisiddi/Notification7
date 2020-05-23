@@ -1,0 +1,59 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	
+		<div class="app-content student-registraion category-creation">
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+			<div class="alert-danger">${errorList}</div>
+			<div class="alert-success">${msg}</div>
+				<form:form
+					action="${pageContext.request.contextPath}/admin/sigmaDetails/create"
+					enctype="multipart/form-data" commandName="sigmaDetailsObj"
+					method="post">
+				
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>SevenSigma Files Creation</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-12">
+						<div class="col">
+							Can Upload Multiple PDF Files<br />
+							<form:input type="file" path="sigmaDocument"
+								accept=".pdf,video/mp4,audio/mp3,audio/mpeg"
+								class="form-control" id="uploadedFile"
+								name="subCategoryArticleImg" placeholder="Upload File"
+								multiple="multiple" />
+						</div>
+						<div class="col mt-3">
+							<!-- <input type="text" class="form-control" placeholder="Class"> -->
+							<div class="dropdown">
+								<form:select path="sevenSigma.id" id="sevenSigma"
+									class="form-control " required="true">
+									<form:option value="">Which Sigma</form:option>
+									<form:options items="${sigmaList}" itemLabel="sigmaName"
+										itemValue="id" />
+								</form:select>
+							</div>
+						</div>
+					</div>
+				
+					<div class="row align-items-center mt-4">
+						<div class="col text-right">
+							<button type="submit" value="submit"
+								class="btn btn-primary themeBtn3">Submit</button>
+						</div>
+					</div>
+
+				</form:form>
+			</div>
+		</div>
+	</div>
+	${errorList}
+
+</div>

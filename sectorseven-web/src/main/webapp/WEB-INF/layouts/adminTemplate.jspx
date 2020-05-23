@@ -1,0 +1,36 @@
+<html xmlns:jsp="http://java.sun.com/JSP/Page"
+	  xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	  xmlns:spring="http://www.springframework.org/tags"
+	  xmlns:util="urn:jsptagdir:/WEB-INF/tags/util">
+    <jsp:output doctype-root-element="HTML"	doctype-system="about:legacy-compat" />
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:directive.page pageEncoding="UTF-8" />
+	<spring:url var="loadIcon" value="/resources/images/loading.gif" />
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   		 <title>Welcome to Sector Seven</title>
+    	<meta name="description" content="" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<meta name="robots" content="all,follow" />
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'></meta>
+		<util:load-scripts/>
+	</head>
+
+   <body>
+		<tiles:insertAttribute name="header" ignore="true" />	
+			  <div class="mg-container">	
+        <div class="mg-overlay"><!--  --></div>	
+          <tiles:insertAttribute name="menu" ignore="true" />
+			<tiles:insertAttribute name="body" />		
+		</div>
+		
+		<div id="ajaxFade"><!--  --></div>
+		<div id="ajaxModal">
+        	<img id="" src="${loadIcon}" width="100" />
+    	</div>	
+		<script> var contextName = '${pageContext.request.contextPath}'; </script>
+  </body>
+  
+</html>

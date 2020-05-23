@@ -1,0 +1,107 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<div class="app-content student-registraion ">
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+				<form:form
+					action="${pageContext.request.contextPath}/admin/hub/create"
+					enctype="multipart/form-data" commandName="hubObject" method="post">
+
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>Co-Creation Hub</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="hubName" id="hubName"
+								placeholder="Hub Name" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter Hub Name.</div>
+						</div>
+						<div class="col">
+							<form:input type="text" path="hubZone" id="hubZone"
+								placeholder="Hub Zone" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter Hub Zone.</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="city" id="city"
+								placeholder="Hub City" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter City.</div>
+						</div>
+						<div class="col">
+							<form:input type="text" path="state" id="state"
+								placeholder="State" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter State.</div>
+						</div>
+
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="pincode" id="pincode"
+								placeholder="Pincode" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter Pincode.</div>
+						</div>
+						<div class="col">
+							<form:input type="text" path="longitude" id="longitude"
+								placeholder="Enter Longitude" class="form-control"
+								required="true" autocomplete="off" />
+							<div class="invalid-feedback">Enter Longitude.</div>
+						</div>
+
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="latitude" id="latitude"
+								placeholder="Enter Latitude" class="form-control"
+								required="true" autocomplete="off" />
+							<div class="invalid-feedback">Enter Latitude.</div>
+						</div>
+						<div class="col">
+							<form:input type="text" path="address1" id="address1"
+								placeholder="Enter Address 1" class="form-control"
+								required="true" autocomplete="off" />
+							<div class="invalid-feedback">Enter Address.</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="address2" name="address2"
+								placeholder="Enter Address 2" required="true"
+								class="form-control" autocomplete="off" />
+							<div class="invalid-feedback">Enter Address.</div>
+						</div>
+						<div class="col">
+							<div class="dropdown">
+								<form:select path="hub" id="hub" class="form-control ">
+									<form:option value="">HubOrNot</form:option>
+									<form:options items="${hubOrNot}" itemLabel="id" itemValue="id" />
+								</form:select>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col text-right">
+							<button type="submit" value="submit" class="btn btn-primary themeBtn3">Submit</button>
+						</div>
+					</div>
+
+				</form:form>
+			</div>
+		</div>
+	</div>
+	${errorList}
+
+</div>

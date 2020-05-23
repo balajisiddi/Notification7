@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+       
+<tiles-definitions>
+	
+	<definition name="logintemplate" template="/WEB-INF/layouts/logintemplate.jspx"></definition>
+	
+	<definition name="adminTemplate" template="/WEB-INF/layouts/adminTemplate.jspx">		
+		<put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />
+	</definition>
+	
+	<definition name="schoolTemplate" template="/WEB-INF/layouts/schoolTemplate.jspx">		
+		<put-attribute name="header" value="/WEB-INF/views/school/header.jspx" />
+		<put-attribute name="menu" value="/WEB-INF/views/school/menu.jspx" />
+	</definition>
+	
+	<definition name="studentTemplate" template="/WEB-INF/layouts/studentTemplate.jspx">		
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/student/menu.jspx" />
+	</definition>
+	
+	<definition name="mentorTemplate" template="/WEB-INF/layouts/mentorTemplate.jspx">		
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/mentor/menu.jspx" />
+	</definition>
+	
+	
+	<definition name="parentTemplate" template="/WEB-INF/layouts/parentTemplate.jspx">		
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/parent/menu.jspx" />
+	</definition>
+	
+	<definition name="schoolTeacherTemplate" template="/WEB-INF/layouts/schollTeacherTemplate.jspx">		
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/schoolTeacher/menu.jspx" />
+	</definition>
+	
+	
+</tiles-definitions>

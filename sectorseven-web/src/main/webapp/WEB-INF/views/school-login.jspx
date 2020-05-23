@@ -1,0 +1,61 @@
+<div  xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+<jsp:output omit-xml-declaration="yes" />
+	<div id="top-bar">	
+		<div class="page-full-width">
+			<!--  -->
+		</div> <!-- end full-width -->	
+	
+	</div> <!-- end top-bar -->
+	
+	
+	
+	<!-- HEADER -->
+	<div id="header">
+		
+		<div class="page-full-width cf">
+	
+			<div id="login-intro" class="fl">
+			
+				<h1>Login to Sector Seven</h1>
+				<h5>Enter your credentials below</h5>
+			
+			</div> <!-- login-intro -->
+			
+			<!-- Change this image to your own company's logo -->
+			<!-- The logo will automatically be resized to 39px height. -->
+			<a href="#" id="company-branding" class="fr"><img src="resources/images/sectorseven_logo.png" alt="Blue Hosting" /></a>
+			
+		</div> <!-- end full-width -->	
+
+	</div> <!-- end header -->
+	<!-- MAIN CONTENT -->
+	<div id="content">
+	
+		<form action="school/j_spring_security_check" method="POST" id="login-form">
+			<fieldset>
+				<p>
+					<label for="login-username">username</label>
+					<input type="text" placeholder="Username" name="j_username" id="username"  class="round full-width-input"  required="true" />
+				</p>
+
+				<p>
+					<label for="login-password">password</label>
+					<input  name="j_password" id="password" type="password" data-msg="Please enter your password" placeholder="Password"  class="round full-width-input" required="true" />
+				</p>
+				
+				<p>I've <a href="#">forgotten my password</a>.</p>
+				
+				<div class="form-group text-center" >
+                 <button type="submit" style="cursor: pointer;" class="button round blue image-right">Login </button>
+              </div>
+			</fieldset>
+				<c:if test="${not empty message}">
+					<br/><div class="information-box round">${message}</div>		
+				</c:if>
+		</form>
+	</div> </div>
+	

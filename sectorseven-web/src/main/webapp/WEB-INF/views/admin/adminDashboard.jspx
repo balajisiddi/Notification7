@@ -1,0 +1,302 @@
+<div class="mg-content" id="mg-content">
+	<!-- tiles -->
+	<div class="app-content">
+		<div class="app-title">
+			<div>
+				<h1> <i class="fas fa-tachometer-alt"><!--  --></i>Dashboard</h1>
+			</div>
+			<ul class="app-breadcrumb breadcrumb">
+				<li class="breadcrumb-item"><i class="fa fa-home fa-lg"> <!-- -->
+				</i></li>
+				<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+			</ul>
+		</div>
+		<div class="row">
+		<div class="col-lg-12">
+			<h5>Users and Schools Info</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small primary coloured-icon">
+					<span class="icon fa fa-users fa-3x"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>All Users</h4>
+						<p>
+							<b>${adminHomeData.allUsers}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small primary coloured-icon">
+					<span class="icon fa fa-users fa-3x"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>Students</h4>
+						<p>
+							<b>${adminHomeData.allStudents}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small primary coloured-icon">
+					<span class="icon fa fa-users fa-3x"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>Mentors</h4>
+						<p>
+							<b>${adminHomeData.allMentors}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small primary coloured-icon">
+					<span class="icon fa fa-users fa-3x"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>School Teachers</h4>
+						<p>
+							<b>${adminHomeData.allschoolTeachers}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small primary coloured-icon">
+					<span class="icon fa fa-users fa-3x"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>Parents</h4>
+						<p>
+							<b>${adminHomeData.allParents}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small primary coloured-icon">
+					<span class="icon fa fa-university"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>Schools</h4>
+						<p>
+							<b>${adminHomeData.allschools}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-12">
+			<h5>Events and Co-creation Hubs Info</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small warning coloured-icon">
+					<span class="icon fa fa-calendar"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>All Events</h4>
+						<p>
+							<b>${adminHomeData.allEvents}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="widget-small warning coloured-icon">
+					<span class="icon fas fa-building"> <!--  -->
+					</span>
+					<div class="info">
+						<h4>Co-Creation Hubs</h4>
+						<p>
+							<b>${adminHomeData.allHubs}</b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-12">
+			<h5>Media Info</h5>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-folder"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>All Media</h4>
+					<p>
+						<b>${adminHomeData.allMedia}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-video-camera"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>All Videos</h4>
+					<p>
+						<b>${adminHomeData.allPDFs}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-file-pdf-o"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>All PDFs</h4>
+					<p>
+						<b>${adminHomeData.allVideos}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-12">
+			<h5>Contributors Info</h5>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-user"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>All Contributors</h4>
+					<p>
+						<b>${adminHomeData.allContributors}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-user"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Student Contributors</h4>
+					<p>
+						<b>${adminHomeData.studentContributors}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-user"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Mentor Contributors</h4>
+					<p>
+						<b>${adminHomeData.mentorContributors}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-user"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Parent Contributors</h4>
+					<p>
+						<b>${adminHomeData.schoolTeacherContributors}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-user"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Teacher Contributors</h4>
+					<p>
+						<b>${adminHomeData.parentContributors}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-12">
+			<h5>Contributions Info</h5>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-heart"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>All Contributions</h4>
+					<p>
+						<b>${adminHomeData.allContributions}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-heart"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Student Contributors</h4>
+					<p>
+						<b>${adminHomeData.studentContributions}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-heart"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Mentor Contributors</h4>
+					<p>
+						<b>${adminHomeData.mentorContributions}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-heart"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Parent Contributors</h4>
+					<p>
+						<b>${adminHomeData.parentContributions}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<div class="widget-small info coloured-icon">
+				<span class="icon fa fa-heart"> <!--  -->
+				</span>
+				<div class="info">
+					<h4>Teacher Contributors</h4>
+					<p>
+						<b>${adminHomeData.schoolTeacherContributions}</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>

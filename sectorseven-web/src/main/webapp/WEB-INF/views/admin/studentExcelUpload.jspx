@@ -1,0 +1,37 @@
+<div class="mg-content" id="mg-content" xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<div class="container">
+	<div class="app-content">
+	<div class="col-md-12 col-md-offset-1">
+	 <form:form action="${pageContext.request.contextPath}/admin/student/upload" enctype="multipart/form-data" commandName="studentDataUpload" method="post">
+		 <div class="panel-heading"  ><h4 class=""> Upload Student Data<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up "><!--  --></i></span></h4></div>
+			<div class="row align-items-center mt-12">
+					<div class="col">
+						Select School<br />
+						<form:select path="school.id" class="form-control " required="true">
+							<form:option value="">Select</form:option>
+							<form:options items="${schoolsList}" itemLabel="schoolName" itemValue="id" />
+						</form:select>
+						<div class="invalid-feedback">School is required.</div>
+						</div>
+					<div class="col">
+					Upload File<br />
+						<form:input type="file" path="document" class="form-control" id="uploadedFile" accept=".xlsx" name="document" required="true" placeholder="Upload File" />
+					
+					</div>
+					<div class="col">
+					<button type="submit" value="submit" style="margin-top:19px;" class="btn btn-primary " > Submit </button>
+					</div>
+				</div>
+				
+	</form:form>
+	</div>
+	</div>
+	</div>
+	${errorList}
+	
+</div>

@@ -1,0 +1,78 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<div class="app-content student-registraion">
+	<div class="alert-danger">${errorList}</div>
+	<div class="alert-success">${msg}</div>
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+				<form:form
+					action="${pageContext.request.contextPath}/admin/event/upload"
+					enctype="multipart/form-data" commandName="eventObject"
+					method="post">
+
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>Add a Event</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="eventName" id="eventName"
+								placeholder="Event Name" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Event Name.</div>
+						</div>
+						<div class="col">
+							<form:input type="text" path="getDate"  id="datetimepicker"
+								placeholder="Event Date" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Event Date</div>
+						</div>
+					</div>
+
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<form:input type="text" path="description" id="description"
+								placeholder="Event Description" class="form-control"
+								required="true" autocomplete="off" />
+							<div class="invalid-feedback">Event Description</div>
+						</div>
+												<div class="col">
+							<!-- <input type="text" class="form-control" placeholder="Class"> -->
+							<div class="dropdown">
+								<form:select path="hubZone.id" id="hubZone" class="form-control"
+									required="true">
+									<form:option value="">Select</form:option>
+									<form:options items="${hubList}" itemLabel="hubName"
+										itemValue="id" />
+								</form:select>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col">
+							<button type="submit" value="submit"
+								class="btn btn-primary themeBtn3">Add Event</button>
+						</div>
+					</div>
+				</form:form>
+			</div>
+		</div>
+	</div>
+<script>
+$(function () {
+	$('#datetimepicker').datetimepicker({
+		dayOfWeekStart : 1,
+		lang:'en',
+		minDate:0,
+		startDate:	new Date()
+		});
+	});
+</script>
+</div>

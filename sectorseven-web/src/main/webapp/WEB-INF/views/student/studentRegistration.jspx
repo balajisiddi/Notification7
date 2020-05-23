@@ -1,0 +1,178 @@
+<div class="mg-content" id="mg-content" xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	
+	<c:if test="${not empty errorMsg}">
+				<fieldset>
+				<div class="alert-danger">
+					${errorMsg}
+				</div>
+				</fieldset>
+				
+			</c:if>
+			<c:if test="${not empty msg}">
+				<fieldset>
+				<div class="alert-success">
+					${msg}
+				</div>
+				</fieldset>
+				
+			</c:if>
+			<div class="app-content">
+	<div class="container">
+  <br></br>
+    <div class="col-md-12 col-md-offset-1">
+	<form:form class="form-horizontal needs-validation" autocomplete="off"  method="post" novalidate= "true" role="form" commandName="studentData" action="${pageContext.request.contextPath}/admin/student/create">
+       <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 faderegister">
+       <div class="row">
+              <div class="col text-center text-white">
+                <h1>Student Registration</h1>
+              </div>
+            </div>
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Personal Information Details</legend>
+          <!-- Text input-->
+         <div class="row align-items-center">
+            
+            <div class="col mt-4">
+              <form:input type="text" path="firstName" id="fistName" placeholder="First Name" required="true" class="form-control" />
+            </div>
+            <div class="col mt-4">
+              <form:input type="text" path="lastName" id="lastName" placeholder="last Name" class="form-control" required="true" />
+            </div>
+          </div>
+<div class="row align-items-center mt-4">
+              <div class="col">
+               <form:input type="text" id="dateOfBirth" path="date_of_birth"  placeholder="DOB" class="form-control datepicker" required="true"/>
+              </div>
+              <div class="col">
+                <!-- <input type="text" class="form-control" placeholder="Class"> -->
+                <div class="dropdown">
+                  <form:select path="school.id" id="school" class="form-control " required="true">
+						<form:option value="">Select</form:option>
+						<form:options items="${schoolsList}" itemLabel="schoolName" itemValue="id" />
+					</form:select>
+                </div>
+              </div>
+            </div>
+            
+          <!-- Text input-->
+          <div class="row align-items-center mt-4">
+          <div class="col">
+              <form:input type="text" id="studentClass" path="studentClass"  placeholder="Class" class="form-control" required="true" />
+            </div>
+       
+          <div class="col">
+            <div class="dropdown">
+               <form:select path="gender" id="gender" class="form-control " required="true">
+						<form:option value="">Select</form:option>
+						<form:options items="${genders}" itemLabel="id" itemValue="id" />
+					</form:select>
+				</div>   
+			           
+               </div>
+               <div class="col">
+            <div class="dropdown">
+               <form:select path="gender" id="gender" class="form-control " required="true">
+						<form:option value="">Select</form:option>
+						<form:options items="${schoolTeacherList}" itemLabel="id" itemValue="id" />
+					</form:select>
+				</div>   
+               </div>
+          </div>
+             <div class="row align-items-center mt-4">
+          <div class="col">
+              <form:input type="text" id="studentClass" path="email"  placeholder="Class" class="form-control" required="true" />
+            </div>
+           <div class="col">
+              <form:input type="text" id="studentClass" path="mobile"  placeholder="Class" class="form-control" required="true" />
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+          <div class="col">
+              <form:input type="text" id="hobbies" path="hobbies"  placeholder="Class" class="form-control" required="true" />
+            </div>
+            </div>
+<!-- Address Section -->
+          <!-- Form Name -->
+          <legend>Address Details</legend>
+          <!-- Text input-->
+          <div class="row align-items-center mt-4">
+				<div class="col">
+					<form:input type="text" path="parents.address" placeholder="Address Line 1" class="form-control" required="true" autocomplete="off" />
+				</div>
+			</div>
+			<!-- Text input-->
+			<div class="row align-items-center mt-4">
+				<div class="col">
+					<form:input type="text" path="parents.address1" placeholder="Address Line 2" class="form-control"  autocomplete="off" />
+				</div>
+			</div>
+          <!-- Text input-->
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <form:input type="text" path="parents.city" placeholder="City" class="form-control" autocomplete="off"  required="true" />
+            </div>
+            <div class="col">
+              <form:input type="text" path="parents.state" placeholder="State" class="form-control" autocomplete="off" required="true" />
+            </div>
+            <div class="col">
+              <form:input type="text" path="parents.pincode" placeholder="Pincode" class="form-control" autocomplete="off" required="true" />
+            </div>
+          </div>
+<!-- Parent/Guadian Contact Section -->
+          <!-- Form Name -->
+          <legend>Parent/Guadian Information</legend>
+          <!-- Text input-->
+              <h5>Father Name</h5>
+	          <div class="row align-items-center mt-4">
+		            <div class="col">
+		              <form:input type="text" path="parents.fatherName" placeholder="Father Name" class="form-control" autocomplete="off" required="true" />
+		            </div>
+		            <div class="col">
+	               <form:input type="number" path="parents.fatherMobile" placeholder="Mobile" class="form-control" autocomplete="off" required="true" />
+	            </div>
+	            <div class="col">
+	              <form:input type="text" path="parents.fatherEmail" placeholder="Email" class="form-control" autocomplete="off" required="true" />
+	            </div>
+	          </div>
+	          <h5>Mother Name</h5>
+             <div class="row align-items-center mt-4">
+	            <div class="col">
+	               <form:input type="text" path="parents.motherName" placeholder="Father Name" class="form-control" autocomplete="off" />
+	            </div>
+	            <div class="col">
+	               <form:input type="number" path="parents.motherMobile" placeholder="Mobile" class="form-control" autocomplete="off" />
+	            </div>
+	            <div class="col">
+	              <form:input type="text" path="parents.motherEmail" placeholder="Email" class="form-control" autocomplete="off" />
+	            </div>
+             </div>
+<!-- Command -->
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <div class="pull-right">
+                <button type="reset" class="btn btn-default">Reset</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        </div>
+     </form:form>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <script type="text/javascript">
+  var $j = jQuery.noConflict();
+	  $j('.datepicker').datepicker({
+		  autoclose : true, 	
+		  format : "mm-dd-yyyy"
+	  });
+	  //$('#school').select2();
+  </script>
+  </div>
+</div>

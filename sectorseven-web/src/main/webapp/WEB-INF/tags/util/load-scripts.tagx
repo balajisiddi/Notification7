@@ -1,0 +1,82 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:jsp="http://java.sun.com/JSP/Page"
+    xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes" />
+    <!-- UI CSS Starts  -->
+    <spring:url var="bootstrapCss"
+        value="/resources/css/files/bootstrap.min.css" />
+    <spring:url var="fontawesomeCss"
+        value="/resources/css/files/font-awesome.min.css" />
+        <spring:url var="fontCss" value="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+    <spring:url var="carouselCss"
+        value="/resources/css/files/owl.carousel.css" />
+    <spring:url var="popupCss"
+        value="/resources/css/files/magnific-popup.css" />
+    <spring:url var="dataTableCss"
+        value="/resources/css/files/jquery.dataTables.min.css" />
+        <spring:url value="/resources/css/files/slick.css" var="SlickCss" />
+    <spring:url var="dashBoardCss" value="/resources/css/dashboard.css" />
+    <spring:url var="responsiveCss" value="/resources/css/responsivecss.css" />
+        <spring:url var="jquery_date_picker" value="/resources/css/files/jquery.datetimepicker.min.css" />
+    
+     <link href="/resources/css/files/bootstrap4-buttons.css" />
+     
+    <!-- UI CSS Ends  -->
+    <!-- Loading CSS Starts  -->
+    <link rel="stylesheet" type="text/css" href="${bootstrapCss}" />
+    <link rel="stylesheet" type="text/css" href="${fontawesomeCss}" />
+        <link rel="stylesheet" type="text/css" href="${fontCss}" />
+    <link rel="stylesheet" type="text/css" href="${carouselCss}" />
+    <link rel="stylesheet" type="text/css" href="${popupCss}" />
+    <link rel="stylesheet" type="text/css" href="${dataTableCss}" />
+    <link rel="stylesheet" type="text/css" href="${scrollCss}" />
+    <link rel="stylesheet" type="text/css" href="${SlickCss}" />
+    <link rel="stylesheet" type="text/css" href="${dashBoardCss}" />
+    <link rel="stylesheet" type="text/css" href="${responsiveCss}" />
+    <link rel="stylesheet" type="text/css" href="${jquery_date_picker}" />
+    <!-- Loading CSS Ends  -->
+    <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
+    <c:set var="userLocale">
+        <c:set var="plocale">${pageContext.response.locale}</c:set>
+        <c:out value="${fn:replace(plocale, '_', '-')}" default="en" />
+    </c:set>
+    <script type="text/javascript">var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};</script>
+    <!-- UI JS Starts  -->
+    <spring:url
+        value="/resources/js/files/jquery.min.js" var="jquery_url" />
+    <spring:url value="/resources/js/files/jquery-ui.js" var="jquery_ui_url" />
+    <spring:url value="/resources/js/popper.min.js" var="popperjs" />
+    <spring:url value="/resources/js/files/bootstrap.min.js" var="bootstrapjs" />
+    <spring:url value="/resources/js/files/jquery.magnific-popup.js" var="popupjs" />
+    <spring:url value="/resources/js/custom.js" var="customjs" />
+    <spring:url value="/resources/js/pace.min.js" var="pacejs" />
+    <spring:url value="/resources/js/files/dataTables.buttons.min.js" var="datatableJs" />
+    <spring:url value="/resources/js/files/jquery.dataTables.min.js" var="datatJs" />
+    <spring:url value="/resources/js/files/serial.js" var="serial_url" />
+    <spring:url value="/resources/js/files/jquery.datetimepicker.full.min.js" var="datePickerJS" />
+    <spring:url value="/resources/js/files/a076d05399.js" var="fontawesomeJS" />
+     <spring:url value="/resources/js/files/slick.min.js" var="slickJS" />
+        <spring:url value="/resources/js/canvasjs.min.js" var="amchart_url" />
+        <spring:url value="/resources/js/files/slick.min.js" var="slim_url" />
+            <spring:url value="/resources/js/files/sweetalert2@9.js" var="sweet_url" />
+        
+    <!-- UI JS Ends  -->
+    <!-- UI JS Loading Starts  -->
+<!--     <script src="${slim_url}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ --> 
+ <script src="${jquery_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+    <script src="${jquery_ui_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+    <script src="${popperjs}" type="text/javascript"><!-- --></script>
+    <script src="${bootstrapjs}" type="text/javascript"></script>
+    <script src="${pacejs}" type="text/javascript"><!-- --></script>
+    <script src="${popupjs}" type="text/javascript"><!-- --></script>
+    <script src="${datatJs}" type="text/javascript"><!-- --></script>
+    <script src="${serial_url}" type="text/javascript"><!-- --></script>
+    <script src="${datePickerJS}" type="text/javascript"></script>
+    <script src="${fontawesomeJS}" type="text/javascript"><!-- --></script>
+    <script src="${slickJS}" type="text/javascript"><!-- --></script>
+    <script src="${sweet_url}" type="text/javascript"></script>
+    <script src="${customjs}" type="text/javascript"><!-- --></script>
+<script src="${amchart_url}" type="text/javascript"><!-- --></script>
+</jsp:root>

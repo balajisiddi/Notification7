@@ -1,0 +1,271 @@
+<div class="mg-sidenav">
+	<div class="app-sidebar__overlay" data-toggle="sidebar">
+		<!--  -->
+	</div>
+	<aside class="app-sidebar">
+		<div class="app-sidebar__user">
+			<img class="app-sidebar__user-avatar"
+				src="${pageContext.request.contextPath}/resources/images/user.png"
+				alt="User Image" />
+			<div>
+				<p class="app-sidebar__user-name">Admin Panel</p>
+				<!-- <p class="app-sidebar__user-designation">Frontend Developer</p> -->
+			</div>
+		</div>
+
+		<ul class="app-menu" id="menu">
+			<li><a class="app-menu__item active"
+				href="${pageContext.request.contextPath}/admin/dashboard"> <i
+					class="app-menu__icon fas fa-tachometer-alt"> <!---->
+				</i> <span class="app-menu__label"> Dashboard</span>
+			</a></li>
+			<li><a class="app-menu__item" data-toggle="collapse"
+				href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+					<i class="app-menu__icon fa fa-user-plus"> <!--  -->
+				</i> <span class="app-menu__label">Registrations</span> <i
+					class="menu-arrow"> <!--  -->
+				</i> <i class="mdi mdi-dribbble menu-icon"> <!--  -->
+				</i>
+			</a>
+				<div class="collapse" id="ui-basic">
+					<ul class="nav flex-column sub-menu">
+						<li><a class="app-menu__item "
+							href="${pageContext.request.contextPath}/admin/school/create">
+								<i class="app-menu__icon far fa-circle"> <!---->
+							</i> <span class="app-menu__label"> School Registration</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/student/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Student Registration</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/mentor/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Mentor Registration</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/teacher/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Teacher Registration</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/parent/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Parent Registration</span>
+						</a></li>
+					</ul>
+				</div></li>
+			<li><a class="app-menu__item"
+				href="${pageContext.request.contextPath}/admin/contributionDocsList">
+					<i class="app-menu__icon fa fa-th-list"> <!---->
+				</i> <span class="app-menu__label">ContributionList</span>
+			</a></li>
+			<li><a class="app-menu__item"
+				href="${pageContext.request.contextPath}/admin/school/list"> <i
+					class="app-menu__icon fa fa-th-list"> <!---->
+				</i> <span class="app-menu__label"> School List</span>
+			</a></li>
+
+			<li><a class="app-menu__item"
+				href="${pageContext.request.contextPath}/admin/hub/create"> <i
+					class="app-menu__icon fa fa-plus"> <!---->
+				</i> <span class="app-menu__label"> Ennovation Hub</span>
+			</a></li>
+			<li><a class="app-menu__item"
+				href="${pageContext.request.contextPath}/admin/event/upload"> <i
+					class="app-menu__icon fa fa-plus"> <!---->
+				</i> <span class="app-menu__label">Events</span>
+			</a></li>
+
+			<li><a class="app-menu__item" data-toggle="collapse"
+				href="#ui-details" aria-expanded="false" aria-controls="ui-basic">
+					<i class="app-menu__icon fa fa-upload"> <!--  -->
+				</i> <span class="app-menu__label">Upload Details</span> <i
+					class="menu-arrow"> <!--  -->
+				</i> <i class="mdi mdi-dribbble menu-icon"> <!--  -->
+				</i>
+			</a>
+				<div class="collapse" id="ui-details">
+					<ul class="nav flex-column sub-menu">
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/career/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Categories</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subcareer/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Sub Categories</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subCareerDetails/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Sub Category Details</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subCareerInstitutes/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Institutions Subcategory</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subCareerScholorships/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Scholorship Subcategory</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subCareerPersons/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">SuccessFull Persons
+									Subcategory</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/sigma/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Seven Sigma Creation</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/sigmaDetails/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">Seven Sigma Details</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/saveDemand/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">DemandAndSupply</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/course/create">
+								<i class="app-menu__icon far fa-circle"> <!--  -->
+							</i><span class="app-menu__label">CourseCreation</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/commonImage">
+								<i class="app-menu__icon fa fa-dashboard"> <!---->
+							</i> <span class="app-menu__label">Upload Common Images</span>
+						</a></li>
+
+					</ul>
+				</div></li>
+
+			<!-- submenu for excels -->
+			<li><a class="app-menu__item" data-toggle="collapse"
+				href="#excel-uploads" aria-expanded="false" aria-controls="ui-basic">
+					<i class="app-menu__icon fa fa-upload"> <!--  -->
+				</i> <span class="app-menu__label">ExcelUploads</span> <i
+					class="menu-arrow"> <!--  -->
+				</i> <i class="mdi mdi-dribbble menu-icon"> <!--  -->
+				</i>
+			</a>
+				<div class="collapse" id="excel-uploads">
+					<ul class="nav flex-column sub-menu">
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subcatExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">SubCategoryExcelUpload</span>
+						</a></li>
+
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/sigmaDetailsExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">SigmaDetailsYoutubeURLExcelUpload</span>
+						</a></li>
+
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/subcatDetailYoutubeURLs/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">SubCatDetailsYoutubeURLExcelUpload</span>
+						</a></li>
+
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/institutesCoursesExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">InstitutesAndCoursesExcelUpload</span>
+						</a></li>
+
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/studentDataExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">Student Data Upload</span>
+						</a></li>
+
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/mentorDataExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">Mentor Data Upload</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/teacherDataExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">Teacher Data Upload</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/successfulPersonalityDataExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">SuccessFulPersonality Data
+									Upload</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/demandAndSupplyDataExcel/upload">
+								<i class="app-menu__icon fa fa-file-excel-o"
+								style="color: #009688"> <!---->
+							</i> <span class="app-menu__label">DemandAndSupply Data Upload</span>
+						</a></li>
+					</ul>
+				</div></li>
+			<li><a class="app-menu__item" data-toggle="collapse"
+				href="#single-excel-uploads" aria-expanded="false"
+				aria-controls="ui-basic"> <i class="app-menu__icon fa fa-upload">
+						<!--  -->
+				</i> <span class="app-menu__label">Single Uploads</span> <i
+					class="menu-arrow"> <!--  -->
+				</i> <i class="mdi mdi-dribbble menu-icon"> <!--  -->
+				</i>
+			</a>
+				<div class="collapse" id="single-excel-uploads">
+					<ul class="nav flex-column sub-menu">
+
+
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/demandAndSupplyContent/upload">
+								<i class="app-menu__icon fa fa-link" style="color: #009688">
+									<!---->
+							</i> <span class="app-menu__label">DandSContent</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/singleSubcareerYoutubeUrl/upload">
+								<i class="app-menu__icon fa fa-link" style="color: #009688">
+									<!---->
+							</i> <span class="app-menu__label">Single Subcareer YoutubeUrl</span>
+						</a></li>
+						<li><a class="app-menu__item"
+							href="${pageContext.request.contextPath}/admin/singleSigmaYoutubeUrl/upload">
+								<i class="app-menu__icon fa fa-link" style="color: #009688">
+									<!---->
+							</i> <span class="app-menu__label">Single SevenSigma YoutubeUrl</span>
+						</a></li>
+						
+
+					</ul>
+				</div></li>
+			<li><a class="app-menu__item"
+				href="${pageContext.request.contextPath}/admin/userFeedbacks"> <i
+					class="app-menu__icon fa fa-comment"> <!---->
+				</i> <span class="app-menu__label"> UserFeedbacks</span>
+			</a></li>
+			<li><a class="app-menu__item"
+				href="${pageContext.request.contextPath}/admin/apkUpdate"> <i
+					class="app-menu__icon fa fa-wrench"> <!---->
+				</i> <span class="app-menu__label">UpdateAPK</span>
+			</a></li>
+		</ul>
+	</aside>
+</div>

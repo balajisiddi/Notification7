@@ -1,0 +1,228 @@
+<div class="mg-content" id="mg-content">
+                <div class="container-fluid">
+                    <!-- tiles -->
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-sm-12">
+                            <div class="card card-tiles">
+                                <div class="card-left">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="card-right">
+                                    <div class="value">4204+</div>
+                                    <span class="title-name">monthly page views</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-sm-12">
+                            <div class="card card-tiles active">
+                                <div class="card-left">
+                                    <i class="fab fa-buromobelexperte"></i>
+                                </div>
+                                <div class="card-right">
+                                    <div class="value">0573+</div>
+                                    <span class="title-name">apps downloded</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-sm-12">
+                            <div class="card card-tiles">
+                                <div class="card-left">
+                                    <i class="far fa-chart-bar"></i>
+                                </div>
+                                <div class="card-right">
+                                    <div class="value">1992+</div>
+                                    <span class="title-name">stocks exchange</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-sm-12">
+                            <div class="card card-tiles">
+                                <div class="card-left">
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </div>
+                                <div class="card-right">
+                                    <div class="value">4014+</div>
+                                    <span class="title-name">monthly total sale</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tiles end -->
+                    <!-- table and graph -->
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-12 col-sm-12">
+                            <div class="card mg-card">
+                                <div class="mg-card-head">Data Tables
+                                        <i class="fas fa-times close" id="close"></i>
+                                </div>
+                                <div class="mg-card-body">
+                                        <table class="table mg-table">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">First</th>
+                                                    <th scope="col">Last</th>
+                                                    <th scope="col">Handle</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td scope="row">1</td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">2</td>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">3</td>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">3</td>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">3</td>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-sm-12">
+                            <div class="card">
+                                    <!-- <div id="donutchart"></div> -->
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-sm-12 ">3</div>
+                    </div>
+                    <!-- table and graph end -->
+                    <!-- data tables -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                                <div class="card mg-card">
+                                        <div class="mg-card-head"><span></span>
+                                                <i class="fas fa-times close" ></i>
+                                        </div>
+                                        <div class="mg-card-body">
+                                                <table id="table_id" class="display">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Column 1</th>
+                                                                <th>Column 2</th>
+                                                                <th>Column 1</th>
+                                                                <th>Column 2</th>
+                                                                <th>Column 1</th>
+                                                                <th>Column 2</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Row 2 Data 1</td>
+                                                                <td>Row 2 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Row 2 Data 1</td>
+                                                                <td>Row 2 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Row 2 Data 1</td>
+                                                                <td>Row 2 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                                <td>Row 1 Data 1</td>
+                                                                <td>Row 1 Data 2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                        </tbody>
+                                                    </table>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- data-tables end -->
+                </div>
+            </div>

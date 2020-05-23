@@ -1,0 +1,98 @@
+<div xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<div id="top-bar">
+		<div class="page-full-width">
+			<!--  -->
+		</div>
+		<!-- end full-width -->
+
+	</div>
+	<!-- end top-bar -->
+	<!-- //expariment start -->
+	<div class="login-page">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- <img src="./resources/images/bg1.png" alt="" class="bg1"/> -->
+				<div class="col-md-6 col-sm-12 stud">
+					<img src="./resources/images/bg.png" alt="" />
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="login-sec">
+									<div class="">
+										<!--  -->
+									</div>
+
+									<div class="card">
+										<h1 class="title">Login</h1>
+										<form action="j_spring_security_check" method="POST"
+											id="login-form">
+											<div class="input-container">
+												<input type="text" name="username" id="username"
+													placeholder="UserName" />
+												<div class="bar">
+													<!--  -->
+												</div>
+											</div>
+											<div class="form-group has-search">
+												<div class="input-container input-group"
+													id="show_hide_password">
+													<input name="password" id="password" type="password"
+														placeholder="Password" />
+													<div class="input-group-addon">
+														<a onclick="passwordFunction()"><i
+															class="fa fa-eye-slash"> <!--  -->
+														</i></a>
+													</div>
+													<div class="bar">
+														<!--  -->
+													</div>
+												</div>
+											</div>
+											<div class="button-container">
+												<button type="submit">
+													<span>Login</span>
+												</button>
+											</div>
+											<div class="button-container">
+												<div id="message"></div>
+											</div>
+											<div class="footer">
+												<a href="${pageContext.request.contextPath}/forgot">Forgot
+													your password?</a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function passwordFunction() {
+			if ($('#show_hide_password input').attr("type") == "text") {
+				$('#show_hide_password input').attr('type', 'password');
+				$('#show_hide_password i').addClass("fa-eye-slash");
+				$('#show_hide_password i').removeClass("fa-eye");
+			} else if ($('#show_hide_password input').attr("type") == "password") {
+				$('#show_hide_password input').attr('type', 'text');
+				$('#show_hide_password i').removeClass("fa-eye-slash");
+				$('#show_hide_password i').addClass("fa-eye");
+			}
+		}
+		document.getElementById('message').innerHTML = "${message}";
+
+		setTimeout(function() {
+			$("#message").hide();
+		}, 5000);
+	</script>
+</div>

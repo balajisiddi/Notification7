@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition extends="adminTemplate" name="admin/student/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/studentExcelUpload.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/mentor/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/mentorCreation.jspx" />
+	</definition>
+
+	<definition extends="adminTemplate" name="admin/parent/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/parentCreation.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/career/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/categoryCreation.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subcareer/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/subCategoryCreation.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subCareerDetails/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/subCategoryDetails.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subCareerInstitutes/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/institutions.jspx" />
+	</definition>
+	
+	
+	<definition extends="adminTemplate" name="admin/hub/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/coCreationHub.jspx" />
+	</definition>
+	<definition extends="adminTemplate" name="admin/sigma/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/sevenSigmaCreation.jspx" />
+	</definition>
+	<definition extends="adminTemplate" name="admin/sigmaDetails/create">
+		<put-attribute name="body" value="/WEB-INF/views/admin/sevenSigmaFilesCreation.jspx" />
+	</definition>
+	<definition extends="adminTemplate" name="admin/event/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/addEvent.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/contributionList">
+		<put-attribute name="body" value="/WEB-INF/views/admin/contributionList.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/sigmaDetailsExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSigmaDetailsExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/instituteExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadInstitutionsExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/instituteCourseExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadInstitutionCoursesExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/institutesCoursesExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadInstitutionsAndCoursesExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subcatDetailsYoutubeUrlExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSubcatDetailsYoutubeUrlExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/subcatExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSubcategoryExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/studentDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadStudentDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/mentorDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadMentorDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/teacherDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSchoolTeacherDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/successfulPersonalityDataExcel/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadSuccessfulPersonalityDataExcel.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/contributionDocsView">
+		<put-attribute name="body" value="/WEB-INF/views/admin/contributionView.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/demandAndSupplyContent/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/uploadDandSContent.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/singleSubcareerYoutubeUrl/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/singleSubcareerYoutubeUrl.jspx" />
+	</definition>
+	
+	<definition extends="adminTemplate" name="admin/singleSigmaYoutubeUrl/upload">
+		<put-attribute name="body" value="/WEB-INF/views/admin/singleSevensigmaYoutubeUrl.jspx" />
+	</definition>
+	
+</tiles-definitions>

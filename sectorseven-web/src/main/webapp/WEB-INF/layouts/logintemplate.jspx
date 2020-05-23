@@ -1,0 +1,44 @@
+<html lang="en" xmlns:jsp="http://java.sun.com/JSP/Page"
+	  xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	  xmlns:spring="http://www.springframework.org/tags"
+	  xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" >
+<jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" />
+<jsp:directive.page contentType="text/html;charset=UTF-8" />
+<jsp:directive.page pageEncoding="UTF-8" />
+	<head>
+		<title>Welcome to Sector Seven</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+		<spring:url var="bootstrapCss" value="/resources/css/files/bootstrap.min.css" />
+		<spring:url var="dashboardCss" value="/resources/css/dashboard.css"/>
+		<spring:url var="responsiveCss" value="/resources/css/responsivecss.css"/>
+	    <spring:url var="fontawesomeCss" value="/resources/css/files/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="${bootstrapCss}" />
+		<link rel="stylesheet" type="text/css" href="${dashboardCss}" />
+		<link rel="stylesheet" type="text/css" href="${responsiveCss}" />
+		<link rel="stylesheet" type="text/css" href="${fontawesomeCss}" />
+		
+	</head>
+
+<body>
+	
+	 <tiles:insertAttribute name="body"/>
+	 <spring:url value="/resources/js/files/jquery.min.js" var="jquery_url" />
+	  <spring:url value="/resources/js/files/sweetalert2@9.js" var="sweet_url" />
+	  	<spring:url value="/resources/js/files/jquery-ui.js" var="jquery_ui_url" />
+	  	<spring:url value="/resources/js/files/bootstrap.min.js" var="bootstrapjs" />
+	  		<spring:url value="/resources/js/custom2.js" var="customjs" />
+	  	
+	  <script src="${jquery_url}" type="text/javascript"><!-- --></script> 
+	  	<script src="${jquery_ui_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+	  	<script src="${bootstrapjs}" type="text/javascript"><!-- --></script>
+	  		    <script src="${sweet_url}" type="text/javascript"><!-- --></script> 
+	  		<script src="${customjs}" type="text/javascript"><!-- --></script>
+	    
+	    
+	<!-- TOP Heading -->
+	
+		<input type="hidden" value="${userId}" name="userId" id="userId"/>
+			<input type="hidden" value="${userType}" name="userType" id="userType"/>
+	
+</body>
+</html>

@@ -1,0 +1,56 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<div class="app-content student-registraion category-creation">
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+				<div class="alert-danger">${errorList}</div>
+				<div class="alert-success">${msg}</div>
+				<form:form
+					action="${pageContext.request.contextPath}/admin/singleSubcareerYoutubeUrl/upload"
+					enctype="multipart/form-data" commandName="subcatDetailObj"
+					method="post">				
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>SubCategory Details Single Youtube URL Upload</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col mt-3">
+							<div class="dropdown">
+								<form:select path="careerSubcat.id" id="careerSubcat"
+									class="form-control " required="true">
+									<form:option value="">Select</form:option>
+									<form:options items="${subCatList}" itemLabel="subCategoryName"
+										itemValue="id" />
+								</form:select>
+							</div>
+						</div>
+
+						<div class="col">
+							<form:input type="text" path="youtubeUrl" class="form-control"
+								id="youtubeUrl" name="youtubeUrl" required="true"
+								placeholder="YouTube Url" />
+						</div>
+
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col text-right">
+							<button type="submit" value="submit"
+								class="btn btn-primary ">Submit</button>
+						</div>
+					</div>
+
+				</form:form>
+			</div>
+		</div>
+	</div>
+
+	<div class="alert-danger">${errorList}</div>
+	<div class="alert-success">${msg}</div>
+</div>

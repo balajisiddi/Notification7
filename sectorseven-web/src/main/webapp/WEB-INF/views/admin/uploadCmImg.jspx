@@ -1,0 +1,50 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	
+		<div class="app-content student-registraion category-creation">
+		<div class="container">
+			<div class="col-md-12 col-md-offset-1">
+				<form:form
+					action="${pageContext.request.contextPath}/admin/commonImage"
+					commandName="commonImg" method="post" enctype="multipart/form-data">
+					
+					<div class="row">
+						<div class="col text-center text-white">
+							<h1>Upload Common Images</h1>
+						</div>
+					</div>
+					<div class="row align-items-center mt-4">
+						<div class="col mt-3">
+							<form:input type="text" path="screen" id="name"
+								placeholder="Enter Screen" class="form-control" required="true"
+								autocomplete="off" />
+							<div class="invalid-feedback">Enter Screen Name.</div>
+						</div>
+						<div class="col">
+							Upload Any Document/Video/Audio<br />
+							<form:input type="file" path="cmImage" class="form-control"
+								id="uploadedFile" name="cmImage" placeholder="Upload File"
+								multiple="multiple" />
+						</div>
+					</div>
+
+					<div class="row align-items-center mt-4">
+						<div class="col text-right">
+							<button type="submit" value="submit"
+								class="btn btn-primary themeBtn3">Submit</button>
+						</div>
+					</div>
+
+
+				</form:form>
+			</div>
+		</div>
+	</div>
+	${errorList}
+
+</div>

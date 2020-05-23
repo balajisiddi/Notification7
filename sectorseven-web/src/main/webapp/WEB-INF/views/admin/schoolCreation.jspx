@@ -1,0 +1,120 @@
+<div class="mg-content" id="mg-content"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<c:if test="${not empty errorMsg}">
+		<fieldset>
+			<div class="alert-danger">${errorMsg}</div>
+		</fieldset>
+	</c:if>
+	
+	<div class="app-content student-registraion">
+		<div class="container">
+			<br></br>
+			<c:if test="${not empty msg}">
+			<div class="alert-success">${msg}</div>
+	</c:if>
+			<div class="col-md-12 col-md-offset-1">
+				<div class="">
+					<form:form class="form-horizontal needs-validation" method="post"
+						role="form" commandName="schoolObject"
+						action="${pageContext.request.contextPath}/admin/school/create">
+						<!-- <form:hidden path="id" value="0"/> -->
+						<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 faderegister">
+							<div class="row">
+								<div class="col text-center text-white">
+									<h1>School Creation</h1>
+								</div>
+							</div>
+							<fieldset>
+								<label>School/Institute Information Details</label>
+								<div class="row align-items-center mt-4">
+									<div class="col">
+										<form:input type="text" path="schoolName" id="schoolName"
+											placeholder="School/Institute Name" class="form-control"
+											required="required" autocomplete="off" />
+										<div class="invalid-feedback">Enter School Name.</div>
+									</div>
+									<div class="col">
+										<form:input type="text" path="schoolCode" name="schoolCode"
+											placeholder="School Code" required="required"
+											class="form-control" autocomplete="off" />
+										<div class="invalid-feedback">Enter School Code.</div>
+									</div>
+								</div>
+
+								<!-- Text input-->
+								<div class="row align-items-center mt-4">
+									<div class="col">
+										<form:input type="text" path="address" name="Street/Road No."
+											placeholder="Street/Road No." class="form-control"
+											autocomplete="off" required="required" />
+										<div class="invalid-feedback">Enter Street/Road No.</div>
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="row align-items-center mt-4">
+									<div class="col">
+										<form:input type="text" path="address1" name="addressLine2"
+											placeholder="Village" class="form-control" autocomplete="off" />
+
+									</div>
+								</div>
+								<!-- Text input-->
+								<div class="row align-items-center mt-4">
+									<div class="col">
+										<form:input path="city" type="text" name="city"
+											placeholder="City" class="form-control" autocomplete="off"
+											required="required" />
+										<div class="invalid-feedback">Enter Street/Road No.</div>
+									</div>
+									<div class="col">
+										<form:input path="state" type="text" name="state"
+											placeholder="State" class="form-control" autocomplete="off"
+											required="required" />
+										<div class="invalid-feedback">State is required</div>
+									</div>
+									<div class="col">
+										<form:input type="number" path="pincode" name="pincode"
+											placeholder="Post Code" autocomplete="off"
+											class="form-control number" required="required" />
+										<div class="invalid-feedback">Pin code is required.</div>
+									</div>
+								</div>
+
+								<div class="row align-items-center mt-4">
+
+									<div class="col">
+										<form:input type="text" path="contactNo"
+											placeholder="Phone Number" autocomplete="off"
+											class="number form-control" required="required" />
+										<div class="invalid-feedback">Contact Number is
+											required.</div>
+									</div>
+									<div class="col">
+										<form:input type="email" name="email" path="email"
+											placeholder="Email" autocomplete="off"
+											class="form-control emailValidator" required="required" />
+										<div class="invalid-feedback">Email is required.</div>
+									</div>
+								</div>
+								<div class="row align-items-center mt-4">
+									<div class="col">
+										<div class="pull-right ">
+											<button type="reset" class="btn btn-default themeBtn2">Reset</button>
+											<button type="submit" class="btn btn-primary themeBtn3">Save</button>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</form:form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

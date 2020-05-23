@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<!-- <definition extends="mentorTemplate" name="/mentor/profile">
+		<put-attribute name="body"
+			value="/WEB-INF/views/mentor/profile.jsp" />
+	</definition>
+
+	<definition extends="mentorTemplate" name="/mentors/events">
+		<put-attribute name="body"
+			value="/WEB-INF/views/mentor/events.jspx" />
+	</definition>
+ -->
+ 
+ <definition extends="mentorTemplate" name="mentor/mentorStudents">
+		<put-attribute name="body" value="/WEB-INF/views/mentor/studentinfo.jsp" />
+	</definition>
+ 
+ 
+	<definition extends="mentorTemplate" name="mentor/studentFootPrints">
+		<put-attribute name="body" value="/WEB-INF/views/mentor/studentRequest.jsp" />
+	</definition>
+
+	<definition extends="mentorTemplate" name="mentor/chat">
+		<put-attribute name="body" value="/WEB-INF/views/mentor/studentQueries.jsp" />
+	</definition>
+
+	<!-- <definition extends="mentorTemplate"
+		name="mentors/sigmasDetails">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+
+	<definition extends="mentorTemplate"
+		name="mentors/careercategories">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/library.jspx" />
+	</definition>
+
+	<definition extends="mentorTemplate"
+		name="mentors/careersubcategories">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/sub-library.jspx" />
+	</definition>
+
+	<definition extends="mentorTemplate"
+		name="mentors/careersubcategorydetails">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition>
+
+	<definition extends="mentorTemplate"
+		name="/mentors/mentorFollowers">
+		<put-attribute name="body"
+			value="/WEB-INF/views/mentor/studentFootPrints.jsp" />
+	</definition>
+
+	<definition extends="mentorTemplate"
+		name="/mentors/questions">
+		<put-attribute name="body"
+			value="/WEB-INF/views/mentor/studentQueries.jsp" />
+	</definition>
+
+ -->
+</tiles-definitions>

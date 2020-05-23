@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	
+	<definition extends="studentTemplate" name="student/mentors">
+		<put-attribute name="body" value="/WEB-INF/views/student/mentors.jsp" />
+	</definition>
+	
+	<definition extends="studentTemplate" name="student/mentorDetails">
+		<put-attribute name="body" value="/WEB-INF/views/student/mentorDetails.jsp" />
+	</definition>
+	
+	<definition extends="studentTemplate" name="student/askmentor">
+		<put-attribute name="body" value="/WEB-INF/views/student/askMentor.jsp" />
+	</definition>
+	
+	<!-- <definition extends="studentTemplate" name="student/sigmasDetails">
+		<put-attribute name="body" value="/WEB-INF/views/common/sigma-details.jsp" />
+	</definition>
+	 -->
+    <!-- <definition extends="studentTemplate" name="student/careercategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/library.jspx" />
+    </definition>
+    
+    <definition extends="studentTemplate" name="student/careersubcategories">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library.jspx" />
+    </definition>
+    
+    <definition extends="studentTemplate" name="student/careersubcategorydetails">
+        <put-attribute name="body" value="/WEB-INF/views/common/sub-library-details.jsp" />
+	</definition> -->
+	
+	
+	<!-- <definition extends="studentTemplate" name="common/trending">
+        <put-attribute name="body" value="/WEB-INF/views/common/trendingCareers.jsp" />
+	</definition> -->
+	
+</tiles-definitions>
